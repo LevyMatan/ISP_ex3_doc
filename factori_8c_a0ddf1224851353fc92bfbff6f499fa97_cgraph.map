@@ -1,0 +1,25 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="&lt; When we want to test a specific function/ scenario compile with that flag, when done,..." alt="" coords="5,426,56,453"/>
+<area shape="rect" id="node2" href="$factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e" title="Create a worker object: Packs parameters into a struct, and calls CreateThread." alt="" coords="135,250,239,277"/>
+<area shape="rect" id="node5" href="$file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f" title="Creates a file handle for shared Read and WRITE." alt="" coords="529,5,715,47"/>
+<area shape="rect" id="node6" href="$file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32" title="Read a single line, that is, all charecters until \r &#160;(including). Outputs the number of charcters th..." alt="" coords="545,392,699,433"/>
+<area shape="rect" id="node13" href="$file__utils__ext_8h.html#aa7d90eddf0161c6ee6b16f7cf59d6525" title="Set global file position for writing." alt="" coords="110,385,265,427"/>
+<area shape="rect" id="node14" href="$command__line__parsing__ext_8h.html#a48746ebf755019b062fe43d17259c7ef" title="parsing the command line, validates input integrity and fills the arg structure. CAUTION: This functi..." alt="" coords="115,451,260,492"/>
+<area shape="rect" id="node19" href="$queue__ext_8h.html#a404707c34930328e4b2bdcd53e600c79" title=" " alt="" coords="319,559,481,586"/>
+<area shape="rect" id="node21" href="$queue__ext_8h.html#a8777304a9bca1e8917a46edd1e4209aa" title="Initiliaze a new queue struct. The new queue will be initialized as empty, that is,..." alt="" coords="104,567,271,594"/>
+<area shape="rect" id="node22" href="$queue__ext_8h.html#a8b324b766f9ec79f8a6b8d7f54cd9d30" title="Add a queue element to queue as the p_last_elem element, will also be the p_first_elem if queue was e..." alt="" coords="135,618,240,645"/>
+<area shape="rect" id="node3" href="$factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title=" " alt="" coords="348,239,452,266"/>
+<area shape="rect" id="node4" href="$file__utils__ext_8h.html#aa61cde9f0eda8ca94b81c2b9ea7efcd9" title="The function prints a line into a buffer according to requirments." alt="" coords="558,71,686,98"/>
+<area shape="rect" id="node7" href="$file__utils__ext_8h.html#a6ba806c9791793d2e17d9c65745589ad" title=" " alt="" coords="537,123,707,164"/>
+<area shape="rect" id="node8" href="$prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb" title="Get the primes object." alt="" coords="554,189,690,215"/>
+<area shape="rect" id="node9" href="$queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="565,239,679,266"/>
+<area shape="rect" id="node11" href="$queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="573,290,671,317"/>
+<area shape="rect" id="node12" href="$queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="575,341,669,367"/>
+<area shape="rect" id="node10" href="$queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="763,425,925,451"/>
+<area shape="rect" id="node15" href="$command__line__parsing_8c.html#abec7de20c29cd0444d46f8c5af93e301" title="converts string to int. Validates string has only numbers." alt="" coords="329,407,471,434"/>
+<area shape="rect" id="node17" href="$command__line__parsing_8c.html#a8b53c718f6779378d21946d66ca14ec4" title="converts string to int. Validates string has only numbers." alt="" coords="323,458,477,485"/>
+<area shape="rect" id="node18" href="$command__line__parsing_8c.html#a3e2c45f563fe312051564da5922fc741" title="print the command line usage for Factori program." alt="" coords="339,509,461,535"/>
+<area shape="rect" id="node16" href="$command__line__parsing_8c.html#ad785d9d76730f07ca1ce0f5797ca178d" title="Get the int from string object extract digits character from string." alt="" coords="555,458,689,485"/>
+<area shape="rect" id="node20" href="$queue_8c.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="565,559,679,586"/>
+<area shape="rect" id="node23" href="$queue_8c.html#a367f4872ef35f4e649ab1da4da1626c1" title="Allocate memory for a queue element and set the data with input parameter Return the pointer to the n..." alt="" coords="323,661,477,703"/>
+</map>

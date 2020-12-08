@@ -1,0 +1,5 @@
+<map id="QUEUE_push" name="QUEUE_push">
+<area shape="rect" id="node1" title="Add a queue element to queue as the p_last_elem element, will also be the p_first_elem if queue was e..." alt="" coords="5,42,111,69"/>
+<area shape="rect" id="node2" href="$queue_8c.html#a367f4872ef35f4e649ab1da4da1626c1" title="Allocate memory for a queue element and set the data with input parameter Return the pointer to the n..." alt="" coords="163,5,317,47"/>
+<area shape="rect" id="node3" href="$queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="159,71,321,98"/>
+</map>

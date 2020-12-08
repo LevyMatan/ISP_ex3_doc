@@ -1,0 +1,5 @@
+<map id="QUEUE_create_queue_element" name="QUEUE_create_queue_element">
+<area shape="rect" id="node1" title="Allocate memory for a queue element and set the data with input parameter Return the pointer to the n..." alt="" coords="257,5,412,47"/>
+<area shape="rect" id="node2" href="$queue_8c.html#a8b324b766f9ec79f8a6b8d7f54cd9d30" title="Add a queue element to queue as the p_last_elem element, will also be the p_first_elem if queue was e..." alt="" coords="104,13,209,39"/>
+<area shape="rect" id="node3" href="$factori_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="&lt; When we want to test a specific function/ scenario compile with that flag, when done,..." alt="" coords="5,13,56,39"/>
+</map>

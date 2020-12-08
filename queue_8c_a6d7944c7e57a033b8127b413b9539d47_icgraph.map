@@ -1,0 +1,12 @@
+<map id="QUEUE_is_valid_queue" name="QUEUE_is_valid_queue">
+<area shape="rect" id="node1" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="660,107,823,134"/>
+<area shape="rect" id="node2" href="$queue_8c.html#a404707c34930328e4b2bdcd53e600c79" title=" " alt="" coords="257,31,420,58"/>
+<area shape="rect" id="node4" href="$queue_8c.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="483,31,597,58"/>
+<area shape="rect" id="node7" href="$queue_8c.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="491,82,589,108"/>
+<area shape="rect" id="node8" href="$queue_8c.html#aba65d83857695640fe99bd89f9c4553a" title="Print all elements in queue." alt="" coords="468,132,612,159"/>
+<area shape="rect" id="node9" href="$queue_8c.html#a8b324b766f9ec79f8a6b8d7f54cd9d30" title="Add a queue element to queue as the p_last_elem element, will also be the p_first_elem if queue was e..." alt="" coords="104,183,209,210"/>
+<area shape="rect" id="node10" href="$queue_8c.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="493,183,587,210"/>
+<area shape="rect" id="node3" href="$factori_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="&lt; When we want to test a specific function/ scenario compile with that flag, when done,..." alt="" coords="5,82,56,108"/>
+<area shape="rect" id="node5" href="$factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title=" " alt="" coords="287,82,391,108"/>
+<area shape="rect" id="node6" href="$factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e" title="Create a worker object: Packs parameters into a struct, and calls CreateThread." alt="" coords="105,82,209,108"/>
+</map>

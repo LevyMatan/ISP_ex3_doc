@@ -1,0 +1,4 @@
+<map id="QUEUE_print_queue" name="QUEUE_print_queue">
+<area shape="rect" id="node1" title="Print all elements in queue." alt="" coords="5,5,149,32"/>
+<area shape="rect" id="node2" href="$queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="197,5,360,32"/>
+</map>

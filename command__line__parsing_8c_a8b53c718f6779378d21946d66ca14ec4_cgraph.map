@@ -1,0 +1,4 @@
+<map id="parse_num_of_threads" name="parse_num_of_threads">
+<area shape="rect" id="node1" title="converts string to int. Validates string has only numbers." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$command__line__parsing_8c.html#ad785d9d76730f07ca1ce0f5797ca178d" title="Get the int from string object extract digits character from string." alt="" coords="208,5,341,32"/>
+</map>

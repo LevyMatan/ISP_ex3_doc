@@ -1,0 +1,5 @@
+<map id="QUEUE_destroy_queue" name="QUEUE_destroy_queue">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,168,57"/>
+<area shape="rect" id="node2" href="$queue_8c.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="216,5,329,32"/>
+<area shape="rect" id="node3" href="$queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="377,31,540,57"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="parse_num_of_tasks" name="parse_num_of_tasks">
+<area shape="rect" id="node1" title="converts string to int. Validates string has only numbers." alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="$command__line__parsing_8c.html#ad785d9d76730f07ca1ce0f5797ca178d" title="Get the int from string object extract digits character from string." alt="" coords="196,5,329,32"/>
+</map>

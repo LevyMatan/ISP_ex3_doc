@@ -1,0 +1,13 @@
+<map id="create_worker" name="create_worker">
+<area shape="rect" id="node1" title="Create a worker object: Packs parameters into a struct, and calls CreateThread." alt="" coords="5,224,109,251"/>
+<area shape="rect" id="node2" href="$factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title=" " alt="" coords="157,224,261,251"/>
+<area shape="rect" id="node3" href="$file__utils__ext_8h.html#aa61cde9f0eda8ca94b81c2b9ea7efcd9" title="The function prints a line into a buffer according to requirments." alt="" coords="338,5,466,32"/>
+<area shape="rect" id="node4" href="$file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f" title="Creates a file handle for shared Read and WRITE." alt="" coords="309,57,495,98"/>
+<area shape="rect" id="node5" href="$file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32" title="Read a single line, that is, all charecters until \r &#160;(including). Outputs the number of charcters th..." alt="" coords="325,122,479,163"/>
+<area shape="rect" id="node6" href="$file__utils__ext_8h.html#a6ba806c9791793d2e17d9c65745589ad" title=" " alt="" coords="317,187,487,229"/>
+<area shape="rect" id="node7" href="$prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb" title="Get the primes object." alt="" coords="334,253,470,280"/>
+<area shape="rect" id="node8" href="$queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="345,304,459,331"/>
+<area shape="rect" id="node10" href="$queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="353,355,451,381"/>
+<area shape="rect" id="node11" href="$queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="355,405,449,432"/>
+<area shape="rect" id="node9" href="$queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="543,355,705,381"/>
+</map>
