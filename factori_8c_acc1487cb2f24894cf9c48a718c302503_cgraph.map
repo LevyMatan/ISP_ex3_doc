@@ -1,12 +1,16 @@
 <map id="worker_thread" name="worker_thread">
-<area shape="rect" id="node1" title=" " alt="" coords="5,224,109,251"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,329,109,356"/>
 <area shape="rect" id="node2" href="$file__utils__ext_8h.html#aa61cde9f0eda8ca94b81c2b9ea7efcd9" title="The function prints a line into a buffer according to requirments." alt="" coords="186,5,314,32"/>
 <area shape="rect" id="node3" href="$file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f" title="Creates a file handle for shared Read and WRITE." alt="" coords="157,57,343,98"/>
 <area shape="rect" id="node4" href="$file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32" title="Read a single line, that is, all charecters until \r &#160;(including). Outputs the number of charcters th..." alt="" coords="173,122,327,163"/>
 <area shape="rect" id="node5" href="$file__utils__ext_8h.html#a6ba806c9791793d2e17d9c65745589ad" title=" " alt="" coords="165,187,335,229"/>
-<area shape="rect" id="node6" href="$prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb" title="Get the primes object." alt="" coords="182,253,318,280"/>
-<area shape="rect" id="node7" href="$queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="193,304,307,331"/>
-<area shape="rect" id="node9" href="$queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="201,355,299,381"/>
-<area shape="rect" id="node10" href="$queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="203,405,297,432"/>
-<area shape="rect" id="node8" href="$queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="391,355,553,381"/>
+<area shape="rect" id="node6" href="$lock__ext_8h.html#ad998fe7d10043d8d0119913c1104f131" title=" " alt="" coords="189,253,311,280"/>
+<area shape="rect" id="node7" href="$lock__ext_8h.html#a387d3cd06fb2999414bd1c60a0214649" title=" " alt="" coords="181,304,319,331"/>
+<area shape="rect" id="node8" href="$lock__ext_8h.html#a5d3201469d7c49626a752c11c7760b10" title=" " alt="" coords="188,355,312,381"/>
+<area shape="rect" id="node9" href="$lock__ext_8h.html#a83e03a05b849ad0ca826de75fe29b2cb" title=" " alt="" coords="179,405,321,432"/>
+<area shape="rect" id="node10" href="$prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb" title="Get the primes object." alt="" coords="182,456,318,483"/>
+<area shape="rect" id="node11" href="$queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="193,507,307,533"/>
+<area shape="rect" id="node13" href="$queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="201,557,299,584"/>
+<area shape="rect" id="node14" href="$queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="203,608,297,635"/>
+<area shape="rect" id="node12" href="$queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="391,557,553,584"/>
 </map>

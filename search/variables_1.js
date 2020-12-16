@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['data_201',['data',['../structqueue__elem__s.html#a4132b46b4901a516175050042022a791',1,'queue_elem_s']]],
-  ['dummy_202',['dummy',['../structlock__s.html#a2d4b8c6cade3ce4db78f775523eac3a1',1,'lock_s']]]
+  ['count_224',['count',['../structqueue__s.html#a25c1dd04b0c392c766af21b5381fe47b',1,'queue_s']]],
+  ['critical_5fsection_5fmutex_5fhandle_225',['critical_section_mutex_handle',['../structlock__s.html#a765bd5f0ba5d88181352ba83a6ee4d2a',1,'lock_s']]]
 ];

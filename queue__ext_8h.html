@@ -105,14 +105,18 @@ $(document).ready(function(){initNavTree('queue__ext_8h.html',''); initResizable
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Windows.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="common__types_8h_source.html">common_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="trace_8h_source.html">trace.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for queue_ext.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="queue__ext_8h__incl.png" border="0" usemap="#aqueue__ext_8h" alt=""/></div>
 <map name="queue__ext_8h" id="aqueue__ext_8h">
-<area shape="rect" title="All exposed functions and types to be used by someone who wants to call the Ceasar lib/program." alt="" coords="66,5,159,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,92,107"/>
-<area shape="rect" href="common__types_8h.html" title="All common hardcoded data, types, and constants." alt="" coords="117,80,239,107"/>
+<area shape="rect" title="All exposed functions and types to be used by someone who wants to call the Ceasar lib/program." alt="" coords="43,5,137,32"/>
+<area shape="rect" title=" " alt="" coords="5,155,92,181"/>
+<area shape="rect" href="common__types_8h.html" title="All common hardcoded data, types, and constants." alt="" coords="29,80,151,107"/>
+<area shape="rect" href="trace_8h.html" title="All common hardcoded data, types, and constants." alt="" coords="176,80,239,107"/>
+<area shape="rect" title=" " alt="" coords="129,155,195,181"/>
+<area shape="rect" title=" " alt="" coords="220,155,285,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -140,7 +144,7 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a1674fd68ced4f60de29e1089924f2614"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue__ext_8h.html#a1674fd68ced4f60de29e1089924f2614">NULL_QUEUE_ELEMENT</a>&#160;&#160;&#160;{.data = 0LL, .p_next = NULL,}</td></tr>
+<tr class="memitem:a1674fd68ced4f60de29e1089924f2614"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue__ext_8h.html#a1674fd68ced4f60de29e1089924f2614">NULL_QUEUE_ELEMENT</a>&#160;&#160;&#160;{.data = 0L, .p_next = NULL,}</td></tr>
 <tr class="separator:a1674fd68ced4f60de29e1089924f2614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa81aaef004c00ea3f90c1b7cd2317e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue__ext_8h.html#afa81aaef004c00ea3f90c1b7cd2317e5">DEBUG_PRINT_QUEUE_STATUS</a>(...)</td></tr>
 <tr class="separator:afa81aaef004c00ea3f90c1b7cd2317e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,7 +162,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a8777304a9bca1e8917a46edd1e4209aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiliaze a new queue struct. The new queue will be initialized as empty, that is, both its p_last_elem and p_first_elem element will point to NULL. is empty is set to true. and the count of elements is set to 0. Note: This function will allocate memory, which must be freed by the caller.  <a href="queue__ext_8h.html#a8777304a9bca1e8917a46edd1e4209aa">More...</a><br /></td></tr>
 <tr class="separator:a8777304a9bca1e8917a46edd1e4209aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1c113374e964f484498f3fa67352e7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="queue__ext_8h.html#abb8bf772572c87679f1b2b61f46d9c4e">queue_elem_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d">QUEUE_top</a> (<a class="el" href="queue__ext_8h.html#a1f77538d8a03d04921fd0ef2aefc7250">queue_t</a> *p_queue)</td></tr>
-<tr class="memdesc:af1c113374e964f484498f3fa67352e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a queue, return the top element of the queue. On fail: reutrn a "NULL Queue element", that is, data is -1LL and next is NULL. Can fail for two reasons: 1) Given a NULL queue pointer. 2) Called on an empty queue.  <a href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d">More...</a><br /></td></tr>
+<tr class="memdesc:af1c113374e964f484498f3fa67352e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a queue, return the top element of the queue. On fail: reutrn a "NULL Queue element", that is, data is INVALID_INTEGER_VALUE and next is NULL. Can fail for two reasons: 1) Given a NULL queue pointer. 2) Called on an empty queue.  <a href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d">More...</a><br /></td></tr>
 <tr class="separator:af1c113374e964f484498f3fa67352e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59dd29666d51f1070ecc907c638f2018"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018">QUEUE_pop</a> (<a class="el" href="queue__ext_8h.html#a1f77538d8a03d04921fd0ef2aefc7250">queue_t</a> *p_queue)</td></tr>
 <tr class="memdesc:a59dd29666d51f1070ecc907c638f2018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removed the top queue element from the queue. If called on empty queue does nothing, but return a return value indicating that. Fails when called with a NULL pointer to queue.  <a href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018">More...</a><br /></td></tr>
@@ -200,7 +204,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="queue__ext_8h_source.html#l00031">31</a> of file <a class="el" href="queue__ext_8h_source.html">queue_ext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue__ext_8h_source.html#l00033">33</a> of file <a class="el" href="queue__ext_8h_source.html">queue_ext.h</a>.</p>
 
 </div>
 </div>
@@ -211,12 +215,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define NULL_QUEUE_ELEMENT&#160;&#160;&#160;{.data = 0LL, .p_next = NULL,}</td>
+          <td class="memname">#define NULL_QUEUE_ELEMENT&#160;&#160;&#160;{.data = 0L, .p_next = NULL,}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="queue__ext_8h_source.html#l00026">26</a> of file <a class="el" href="queue__ext_8h_source.html">queue_ext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue__ext_8h_source.html#l00027">27</a> of file <a class="el" href="queue__ext_8h_source.html">queue_ext.h</a>.</p>
 
 </div>
 </div>
@@ -296,16 +300,16 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            {</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                <a class="code" href="structqueue__elem__s.html">queue_elem_t</a> *p_temp_elem = p_curr_elem-&gt;<a class="code" href="structqueue__elem__s.html#a182e8469471483e87a4595e59ba637ae">p_next</a>;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                free(p_curr_elem);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <a class="code" href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aff81c997c9611c2854fd1a9d5bba0c3f">DEBUG_LEVEL_THREE</a>, <span class="stringliteral">&quot;Just freed a queue element! :)\n&quot;</span>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <a class="code" href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aff81c997c9611c2854fd1a9d5bba0c3f">DEBUG_LEVEL_THREE</a>, <span class="stringliteral">&quot;Just freed a queue element! :)\n&quot;</span>);</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                p_curr_elem = p_temp_elem;</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            }</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            free(p_curr_elem);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <a class="code" href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aff81c997c9611c2854fd1a9d5bba0c3f">DEBUG_LEVEL_THREE</a>, <span class="stringliteral">&quot;Just freed a queue element! :)\n&quot;</span>);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <a class="code" href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aff81c997c9611c2854fd1a9d5bba0c3f">DEBUG_LEVEL_THREE</a>, <span class="stringliteral">&quot;Just freed a queue element! :)\n&quot;</span>);</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        }</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        free(*p_queue);</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <a class="code" href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aff81c997c9611c2854fd1a9d5bba0c3f">DEBUG_LEVEL_THREE</a>, <span class="stringliteral">&quot;Just freed the queue pointer! :)\n&quot;</span>);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <a class="code" href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aff81c997c9611c2854fd1a9d5bba0c3f">DEBUG_LEVEL_THREE</a>, <span class="stringliteral">&quot;Just freed the queue pointer! :)\n&quot;</span>);</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        (*p_queue) = NULL;</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
@@ -315,7 +319,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> e_status;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="trace_8h_source.html#l00087">DEBUG_LEVEL_THREE</a>, <a class="el" href="trace_8h_source.html#l00156">DEBUG_PRINT</a>, <a class="el" href="trace_8h_source.html#l00159">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00158">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00062">ERROR_INVALID_QUEUE_E</a>, <a class="el" href="common__types_8h_source.html#l00037">ERROR_OK</a>, <a class="el" href="queue__ext_8h_source.html#l00041">queue_elem_s::p_next</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, <a class="el" href="queue_8c_source.html#l00206">QUEUE_empty()</a>, and <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>.</p>
+<p class="reference">References <a class="el" href="trace_8h_source.html#l00087">DEBUG_LEVEL_THREE</a>, <a class="el" href="trace_8h_source.html#l00132">DEBUG_PRINT</a>, <a class="el" href="trace_8h_source.html#l00160">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00154">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00063">ERROR_INVALID_QUEUE_E</a>, <a class="el" href="common__types_8h_source.html#l00038">ERROR_OK</a>, <a class="el" href="queue__ext_8h_source.html#l00046">queue_elem_s::p_next</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, <a class="el" href="queue_8c_source.html#l00206">QUEUE_empty()</a>, and <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00029">main()</a>.</p>
 <div class="dynheader">
@@ -385,9 +389,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> b_is_empty;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="trace_8h_source.html#l00159">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00158">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="queue__ext_8h_source.html#l00048">queue_s::p_first_elem</a>, and <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>.</p>
+<p class="reference">References <a class="el" href="trace_8h_source.html#l00160">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00154">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="queue__ext_8h_source.html#l00053">queue_s::p_first_elem</a>, and <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue_8c_source.html#l00234">QUEUE_destroy_queue()</a>, and <a class="el" href="factori_8c_source.html#l00231">worker_thread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="queue_8c_source.html#l00234">QUEUE_destroy_queue()</a>, and <a class="el" href="factori_8c_source.html#l00289">worker_thread()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -443,7 +447,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        p_queue-&gt;<a class="code" href="structqueue__s.html#a25c1dd04b0c392c766af21b5381fe47b">count</a>         = 0LL;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        p_queue-&gt;<a class="code" href="structqueue__s.html#a25c1dd04b0c392c766af21b5381fe47b">count</a>         = 0L;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        p_queue-&gt;<a class="code" href="structqueue__s.html#a05ddcc010d2d43748bc152277f95a86a">p_first_elem</a>  = NULL;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        p_queue-&gt;<a class="code" href="structqueue__s.html#af74d67d55efd6aad938f2b69b6b4f204">p_last_elem</a>   = NULL;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
@@ -454,7 +458,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> p_queue;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="queue__ext_8h_source.html#l00047">queue_s::count</a>, <a class="el" href="trace_8h_source.html#l00159">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00158">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="queue__ext_8h_source.html#l00048">queue_s::p_first_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00049">queue_s::p_last_elem</a>, and <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>.</p>
+<p class="reference">References <a class="el" href="queue__ext_8h_source.html#l00052">queue_s::count</a>, <a class="el" href="trace_8h_source.html#l00160">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00154">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="queue__ext_8h_source.html#l00053">queue_s::p_first_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00054">queue_s::p_last_elem</a>, and <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00029">main()</a>.</p>
 <div class="dynheader">
@@ -518,7 +522,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#a10c07d9005bfe143de9466f717c69d29">DEBUG_LEVEL_LOWEST</a>, <span class="stringliteral">&quot;Called on an empty queue, nothing to pop.\n&quot;</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#a10c07d9005bfe143de9466f717c69d29">DEBUG_LEVEL_LOWEST</a>, <span class="stringliteral">&quot;Called on an empty queue, nothing to pop.\n&quot;</span>);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a473ec8de27f4c385a3f73c4e1dc2e199">ERROR_CALLED_ON_EMPTY_QUEUE_E</a>;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
@@ -533,9 +537,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">return</span> e_status;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="queue__ext_8h_source.html#l00047">queue_s::count</a>, <a class="el" href="trace_8h_source.html#l00084">DEBUG_LEVEL_LOWEST</a>, <a class="el" href="trace_8h_source.html#l00156">DEBUG_PRINT</a>, <a class="el" href="trace_8h_source.html#l00159">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00158">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00064">ERROR_CALLED_ON_EMPTY_QUEUE_E</a>, <a class="el" href="common__types_8h_source.html#l00062">ERROR_INVALID_QUEUE_E</a>, <a class="el" href="common__types_8h_source.html#l00037">ERROR_OK</a>, <a class="el" href="queue__ext_8h_source.html#l00048">queue_s::p_first_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00049">queue_s::p_last_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00041">queue_elem_s::p_next</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, and <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>.</p>
+<p class="reference">References <a class="el" href="queue__ext_8h_source.html#l00052">queue_s::count</a>, <a class="el" href="trace_8h_source.html#l00084">DEBUG_LEVEL_LOWEST</a>, <a class="el" href="trace_8h_source.html#l00132">DEBUG_PRINT</a>, <a class="el" href="trace_8h_source.html#l00160">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00154">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00065">ERROR_CALLED_ON_EMPTY_QUEUE_E</a>, <a class="el" href="common__types_8h_source.html#l00063">ERROR_INVALID_QUEUE_E</a>, <a class="el" href="common__types_8h_source.html#l00038">ERROR_OK</a>, <a class="el" href="queue__ext_8h_source.html#l00053">queue_s::p_first_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00054">queue_s::p_last_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00046">queue_elem_s::p_next</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, and <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00231">worker_thread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00289">worker_thread()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -605,7 +609,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="queue__ext_8h_source.html#l00047">queue_s::count</a>, <a class="el" href="queue__ext_8h_source.html#l00040">queue_elem_s::data</a>, <a class="el" href="trace_8h_source.html#l00028">GREEN__CONSOLE_COLOR_CODE</a>, <a class="el" href="queue__ext_8h_source.html#l00048">queue_s::p_first_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00041">queue_elem_s::p_next</a>, <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>, and <a class="el" href="trace_8h_source.html#l00029">WHITE__CONSOLE_COLOR_CODE</a>.</p>
+<p class="reference">References <a class="el" href="queue__ext_8h_source.html#l00052">queue_s::count</a>, <a class="el" href="queue__ext_8h_source.html#l00045">queue_elem_s::data</a>, <a class="el" href="trace_8h_source.html#l00028">GREEN__CONSOLE_COLOR_CODE</a>, <a class="el" href="queue__ext_8h_source.html#l00053">queue_s::p_first_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00046">queue_elem_s::p_next</a>, <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>, and <a class="el" href="trace_8h_source.html#l00029">WHITE__CONSOLE_COLOR_CODE</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -694,7 +698,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span> e_status;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="queue__ext_8h_source.html#l00047">queue_s::count</a>, <a class="el" href="queue__ext_8h_source.html#l00040">queue_elem_s::data</a>, <a class="el" href="trace_8h_source.html#l00159">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00158">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00062">ERROR_INVALID_QUEUE_E</a>, <a class="el" href="common__types_8h_source.html#l00037">ERROR_OK</a>, <a class="el" href="queue__ext_8h_source.html#l00048">queue_s::p_first_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00049">queue_s::p_last_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00041">queue_elem_s::p_next</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, <a class="el" href="queue_8c_source.html#l00315">QUEUE_create_queue_element()</a>, and <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>.</p>
+<p class="reference">References <a class="el" href="queue__ext_8h_source.html#l00052">queue_s::count</a>, <a class="el" href="queue__ext_8h_source.html#l00045">queue_elem_s::data</a>, <a class="el" href="trace_8h_source.html#l00160">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00154">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00063">ERROR_INVALID_QUEUE_E</a>, <a class="el" href="common__types_8h_source.html#l00038">ERROR_OK</a>, <a class="el" href="queue__ext_8h_source.html#l00053">queue_s::p_first_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00054">queue_s::p_last_elem</a>, <a class="el" href="queue__ext_8h_source.html#l00046">queue_elem_s::p_next</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, <a class="el" href="queue_8c_source.html#l00315">QUEUE_create_queue_element()</a>, and <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00029">main()</a>.</p>
 <div class="dynheader">
@@ -735,7 +739,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Given a queue, return the top element of the queue. On fail: reutrn a "NULL Queue element", that is, data is -1LL and next is NULL. Can fail for two reasons: 1) Given a NULL queue pointer. 2) Called on an empty queue. </p>
+<p>Given a queue, return the top element of the queue. On fail: reutrn a "NULL Queue element", that is, data is INVALID_INTEGER_VALUE and next is NULL. Can fail for two reasons: 1) Given a NULL queue pointer. 2) Called on an empty queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">p_queue</td><td></td></tr>
@@ -748,7 +752,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// Debug Prefix /////////////</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="structqueue__elem__s.html">queue_elem_t</a> top_queue_elem = {.<a class="code" href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">data</a> = -1LL, .p_next = NULL};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="structqueue__elem__s.html">queue_elem_t</a> top_queue_elem = {.<a class="code" href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">data</a> = <a class="code" href="common__types_8h.html#aef4b50ccd470e2aa9f71340e3248b5cd">INVALID_INTEGER_VALUE</a>, .p_next = NULL};</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span>(FALSE == <a class="code" href="queue_8c.html#a6d7944c7e57a033b8127b413b9539d47">QUEUE_is_valid_queue</a>(p_queue))</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Invalid queue.\n&quot;</span>);</div>
@@ -771,9 +775,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> top_queue_elem;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="queue__ext_8h_source.html#l00040">queue_elem_s::data</a>, <a class="el" href="trace_8h_source.html#l00159">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00158">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="queue__ext_8h_source.html#l00048">queue_s::p_first_elem</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, and <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>.</p>
+<p class="reference">References <a class="el" href="queue__ext_8h_source.html#l00045">queue_elem_s::data</a>, <a class="el" href="trace_8h_source.html#l00160">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00154">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00016">INVALID_INTEGER_VALUE</a>, <a class="el" href="queue__ext_8h_source.html#l00053">queue_s::p_first_elem</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, and <a class="el" href="queue_8c_source.html#l00358">QUEUE_is_valid_queue()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00231">worker_thread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00289">worker_thread()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -800,32 +804,33 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="atrace_8h_html_abdfe92928f6ac993311c579d9ebad25e"><div class="ttname"><a href="trace_8h.html#abdfe92928f6ac993311c579d9ebad25e">GREEN__CONSOLE_COLOR_CODE</a></div><div class="ttdeci">#define GREEN__CONSOLE_COLOR_CODE</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00028">trace.h:28</a></div></div>
-<div class="ttc" id="atrace_8h_html_ad4ed3d5d742c56a417076ab5e1a5dd29"><div class="ttname"><a href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_START()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00158">trace.h:158</a></div></div>
-<div class="ttc" id="astructqueue__elem__s_html"><div class="ttname"><a href="structqueue__elem__s.html">queue_elem_s</a></div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00038">queue_ext.h:39</a></div></div>
+<div class="ttc" id="atrace_8h_html_ad4ed3d5d742c56a417076ab5e1a5dd29"><div class="ttname"><a href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_START()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00154">trace.h:154</a></div></div>
+<div class="ttc" id="astructqueue__elem__s_html"><div class="ttname"><a href="structqueue__elem__s.html">queue_elem_s</a></div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00043">queue_ext.h:44</a></div></div>
 <div class="ttc" id="atrace_8h_html_aff81c997c9611c2854fd1a9d5bba0c3f"><div class="ttname"><a href="trace_8h.html#aff81c997c9611c2854fd1a9d5bba0c3f">DEBUG_LEVEL_THREE</a></div><div class="ttdeci">#define DEBUG_LEVEL_THREE</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00087">trace.h:87</a></div></div>
-<div class="ttc" id="astructqueue__elem__s_html_a182e8469471483e87a4595e59ba637ae"><div class="ttname"><a href="structqueue__elem__s.html#a182e8469471483e87a4595e59ba637ae">queue_elem_s::p_next</a></div><div class="ttdeci">queue_elem_t * p_next</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00041">queue_ext.h:41</a></div></div>
+<div class="ttc" id="astructqueue__elem__s_html_a182e8469471483e87a4595e59ba637ae"><div class="ttname"><a href="structqueue__elem__s.html#a182e8469471483e87a4595e59ba637ae">queue_elem_s::p_next</a></div><div class="ttdeci">queue_elem_t * p_next</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00046">queue_ext.h:46</a></div></div>
 <div class="ttc" id="aqueue_8c_html_a367f4872ef35f4e649ab1da4da1626c1"><div class="ttname"><a href="queue_8c.html#a367f4872ef35f4e649ab1da4da1626c1">QUEUE_create_queue_element</a></div><div class="ttdeci">static error_e QUEUE_create_queue_element(const DWORD data, queue_elem_t **p_new_queue_element)</div><div class="ttdoc">Allocate memory for a queue element and set the data with input parameter Return the pointer to the n...</div><div class="ttdef"><b>Definition:</b> <a href="queue_8c_source.html#l00315">queue.c:315</a></div></div>
 <div class="ttc" id="aqueue_8c_html_a6d7944c7e57a033b8127b413b9539d47"><div class="ttname"><a href="queue_8c.html#a6d7944c7e57a033b8127b413b9539d47">QUEUE_is_valid_queue</a></div><div class="ttdeci">static BOOL QUEUE_is_valid_queue(queue_t *p_queue)</div><div class="ttdoc">A queue is valid in two cases: 1) Not-empty: if queue is not empty, count is greater than zero,...</div><div class="ttdef"><b>Definition:</b> <a href="queue_8c_source.html#l00358">queue.c:358</a></div></div>
-<div class="ttc" id="astructqueue__s_html_af74d67d55efd6aad938f2b69b6b4f204"><div class="ttname"><a href="structqueue__s.html#af74d67d55efd6aad938f2b69b6b4f204">queue_s::p_last_elem</a></div><div class="ttdeci">queue_elem_t * p_last_elem</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00049">queue_ext.h:49</a></div></div>
-<div class="ttc" id="atrace_8h_html_a88edd2aa4feabff4af21a997d5d8aa23"><div class="ttname"><a href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a></div><div class="ttdeci">#define DEBUG_PRINT(...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00156">trace.h:156</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a></div><div class="ttdeci">error_e</div><div class="ttdoc">Error enumerators, when shared, allows program call to handle issues.</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00034">common_types.h:35</a></div></div>
-<div class="ttc" id="astructqueue__s_html_a25c1dd04b0c392c766af21b5381fe47b"><div class="ttname"><a href="structqueue__s.html#a25c1dd04b0c392c766af21b5381fe47b">queue_s::count</a></div><div class="ttdeci">DWORD count</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00047">queue_ext.h:47</a></div></div>
+<div class="ttc" id="astructqueue__s_html_af74d67d55efd6aad938f2b69b6b4f204"><div class="ttname"><a href="structqueue__s.html#af74d67d55efd6aad938f2b69b6b4f204">queue_s::p_last_elem</a></div><div class="ttdeci">queue_elem_t * p_last_elem</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00054">queue_ext.h:54</a></div></div>
+<div class="ttc" id="atrace_8h_html_a596f88f10694cc84b74df7727e012d0e"><div class="ttname"><a href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a></div><div class="ttdeci">#define DEBUG_PRINT(__DBG_LEVEL__,...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00132">trace.h:132</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a></div><div class="ttdeci">error_e</div><div class="ttdoc">Error enumerators, when shared, allows program call to handle issues.</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00035">common_types.h:36</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_aef4b50ccd470e2aa9f71340e3248b5cd"><div class="ttname"><a href="common__types_8h.html#aef4b50ccd470e2aa9f71340e3248b5cd">INVALID_INTEGER_VALUE</a></div><div class="ttdeci">#define INVALID_INTEGER_VALUE</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00016">common_types.h:16</a></div></div>
+<div class="ttc" id="astructqueue__s_html_a25c1dd04b0c392c766af21b5381fe47b"><div class="ttname"><a href="structqueue__s.html#a25c1dd04b0c392c766af21b5381fe47b">queue_s::count</a></div><div class="ttdeci">DWORD count</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00052">queue_ext.h:52</a></div></div>
 <div class="ttc" id="atrace_8h_html_a06187d60998f1477feb70eb38da34473"><div class="ttname"><a href="trace_8h.html#a06187d60998f1477feb70eb38da34473">WHITE__CONSOLE_COLOR_CODE</a></div><div class="ttdeci">#define WHITE__CONSOLE_COLOR_CODE</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00029">trace.h:29</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c">ERROR_OK</a></div><div class="ttdeci">@ ERROR_OK</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00037">common_types.h:37</a></div></div>
-<div class="ttc" id="astructqueue__elem__s_html_a4132b46b4901a516175050042022a791"><div class="ttname"><a href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">queue_elem_s::data</a></div><div class="ttdeci">DWORD data</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00040">queue_ext.h:40</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232af8408cea0509d908e242e7918b6e3379"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232af8408cea0509d908e242e7918b6e3379">ERROR_INVALID_QUEUE_E</a></div><div class="ttdeci">@ ERROR_INVALID_QUEUE_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00062">common_types.h:62</a></div></div>
-<div class="ttc" id="astructqueue__s_html_a05ddcc010d2d43748bc152277f95a86a"><div class="ttname"><a href="structqueue__s.html#a05ddcc010d2d43748bc152277f95a86a">queue_s::p_first_elem</a></div><div class="ttdeci">queue_elem_t * p_first_elem</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00048">queue_ext.h:48</a></div></div>
-<div class="ttc" id="astructqueue__s_html"><div class="ttname"><a href="structqueue__s.html">queue_s</a></div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00045">queue_ext.h:46</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c">ERROR_OK</a></div><div class="ttdeci">@ ERROR_OK</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00038">common_types.h:38</a></div></div>
+<div class="ttc" id="astructqueue__elem__s_html_a4132b46b4901a516175050042022a791"><div class="ttname"><a href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">queue_elem_s::data</a></div><div class="ttdeci">DWORD data</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00045">queue_ext.h:45</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232af8408cea0509d908e242e7918b6e3379"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232af8408cea0509d908e242e7918b6e3379">ERROR_INVALID_QUEUE_E</a></div><div class="ttdeci">@ ERROR_INVALID_QUEUE_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00063">common_types.h:63</a></div></div>
+<div class="ttc" id="astructqueue__s_html_a05ddcc010d2d43748bc152277f95a86a"><div class="ttname"><a href="structqueue__s.html#a05ddcc010d2d43748bc152277f95a86a">queue_s::p_first_elem</a></div><div class="ttdeci">queue_elem_t * p_first_elem</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00053">queue_ext.h:53</a></div></div>
+<div class="ttc" id="astructqueue__s_html"><div class="ttname"><a href="structqueue__s.html">queue_s</a></div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00050">queue_ext.h:51</a></div></div>
 <div class="ttc" id="atrace_8h_html_a9e1da3f98202e27d74c6309dec5e8dbf"><div class="ttname"><a href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a></div><div class="ttdeci">#define print_error_msg(...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00042">trace.h:42</a></div></div>
-<div class="ttc" id="atrace_8h_html_afc1d6b99a4c100f81e56388c74b63cf1"><div class="ttname"><a href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_END()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00159">trace.h:159</a></div></div>
+<div class="ttc" id="atrace_8h_html_afc1d6b99a4c100f81e56388c74b63cf1"><div class="ttname"><a href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_END()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00160">trace.h:160</a></div></div>
 <div class="ttc" id="aqueue_8c_html_a9bc9b6a4ce45ab9e7bd2beb99646a892"><div class="ttname"><a href="queue_8c.html#a9bc9b6a4ce45ab9e7bd2beb99646a892">QUEUE_empty</a></div><div class="ttdeci">BOOL QUEUE_empty(queue_t *p_queue)</div><div class="ttdoc">Is the queue empty? returns true when empty.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8c_source.html#l00206">queue.c:206</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a473ec8de27f4c385a3f73c4e1dc2e199"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a473ec8de27f4c385a3f73c4e1dc2e199">ERROR_CALLED_ON_EMPTY_QUEUE_E</a></div><div class="ttdeci">@ ERROR_CALLED_ON_EMPTY_QUEUE_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00064">common_types.h:64</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a473ec8de27f4c385a3f73c4e1dc2e199"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a473ec8de27f4c385a3f73c4e1dc2e199">ERROR_CALLED_ON_EMPTY_QUEUE_E</a></div><div class="ttdeci">@ ERROR_CALLED_ON_EMPTY_QUEUE_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00065">common_types.h:65</a></div></div>
 <div class="ttc" id="atrace_8h_html_a10c07d9005bfe143de9466f717c69d29"><div class="ttname"><a href="trace_8h.html#a10c07d9005bfe143de9466f717c69d29">DEBUG_LEVEL_LOWEST</a></div><div class="ttdeci">#define DEBUG_LEVEL_LOWEST</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00084">trace.h:84</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_41bbe6cf917fb24e0014a8b763a4c43f.html">Ex3</a></li><li class="navelem"><a class="el" href="dir_f3eab118362eb2556e30c81da235aae4.html">Factori</a></li><li class="navelem"><a class="el" href="dir_5a3447bd14d185288e2bbd0637dced25.html">include</a></li><li class="navelem"><a class="el" href="queue__ext_8h.html">queue_ext.h</a></li>
-    <li class="footer">Generated on Tue Dec 8 2020 20:48:13 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Wed Dec 16 2020 21:46:21 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

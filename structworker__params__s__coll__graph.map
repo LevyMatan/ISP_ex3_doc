@@ -1,7 +1,9 @@
 <map id="worker_params_s" name="worker_params_s">
-<area shape="rect" id="node1" title=" " alt="" coords="24,288,149,315"/>
-<area shape="rect" id="node2" href="$structqueue__s.html" title=" " alt="" coords="7,199,78,225"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,80,32"/>
-<area shape="rect" id="node4" href="$structqueue__elem__s.html" title=" " alt="" coords="83,95,189,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="103,199,159,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="110,364,235,391"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,273,52,300"/>
+<area shape="rect" id="node3" href="$structqueue__s.html" title=" " alt="" coords="101,273,172,300"/>
+<area shape="rect" id="node4" title=" " alt="" coords="99,5,174,32"/>
+<area shape="rect" id="node5" href="$structqueue__elem__s.html" title=" " alt="" coords="83,168,190,195"/>
+<area shape="rect" id="node6" href="$structlock__s.html" title=" " alt="" coords="283,168,343,195"/>
+<area shape="rect" id="node7" title=" " alt="" coords="274,5,351,32"/>
 </map>

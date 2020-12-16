@@ -92,14 +92,20 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <div class="contents">
 <div class="textblock">Here is a list of all struct and union fields with links to the structures/unions they belong to:</div><ul>
+<li>a_task_file_name
+: <a class="el" href="structfactori__args__s.html#a0ae7de72f63571717d15a5668b83c8df">factori_args_s</a>
+</li>
+<li>a_tasks_file_name
+: <a class="el" href="structworker__params__s.html#a6a7695ab492ad6eb66512cc155b184c4">worker_params_s</a>
+</li>
 <li>count
 : <a class="el" href="structqueue__s.html#a25c1dd04b0c392c766af21b5381fe47b">queue_s</a>
 </li>
+<li>critical_section_mutex_handle
+: <a class="el" href="structlock__s.html#a765bd5f0ba5d88181352ba83a6ee4d2a">lock_s</a>
+</li>
 <li>data
 : <a class="el" href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">queue_elem_s</a>
-</li>
-<li>dummy
-: <a class="el" href="structlock__s.html#a2d4b8c6cade3ce4db78f775523eac3a1">lock_s</a>
 </li>
 <li>num_of_tasks
 : <a class="el" href="structfactori__args__s.html#a6a3ab6084b270ff564598eaa05562681">factori_args_s</a>
@@ -113,6 +119,12 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>p_last_elem
 : <a class="el" href="structqueue__s.html#af74d67d55efd6aad938f2b69b6b4f204">queue_s</a>
 </li>
+<li>p_lock_queue
+: <a class="el" href="structworker__params__s.html#ac119332d5ac44045e1c7d27e23263947">worker_params_s</a>
+</li>
+<li>p_lock_tasks_file
+: <a class="el" href="structworker__params__s.html#a2e86a302da7bea84d2f127e64cb4e8bb">worker_params_s</a>
+</li>
 <li>p_next
 : <a class="el" href="structqueue__elem__s.html#a182e8469471483e87a4595e59ba637ae">queue_elem_s</a>
 </li>
@@ -122,11 +134,14 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>p_queue
 : <a class="el" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">worker_params_s</a>
 </li>
-<li>p_task_file_name
-: <a class="el" href="structfactori__args__s.html#add68cf3a4d93205fcfeec93f90f30c63">factori_args_s</a>
+<li>readers
+: <a class="el" href="structlock__s.html#aa1080acaffe76998081127bc1bf15ef7">lock_s</a>
 </li>
-<li>p_tasks_file_name
-: <a class="el" href="structworker__params__s.html#a3ff21f335a9d6e04c143c50217585a04">worker_params_s</a>
+<li>readers_semaphore_handle
+: <a class="el" href="structlock__s.html#ae534931d886b80e145a2e23a887541db">lock_s</a>
+</li>
+<li>turnstile_mutex_handle
+: <a class="el" href="structlock__s.html#a18d070df416f56fc09cecd666f822a44">lock_s</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -134,7 +149,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Dec 8 2020 20:48:13 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Wed Dec 16 2020 21:46:21 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

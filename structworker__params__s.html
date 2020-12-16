@@ -104,25 +104,85 @@ Collaboration diagram for worker_params_s:</div>
 <div class="dyncontent">
 <div class="center"><img src="structworker__params__s__coll__graph.png" border="0" usemap="#aworker__params__s_coll__map" alt="Collaboration graph"/></div>
 <map name="worker__params__s_coll__map" id="aworker__params__s_coll__map">
-<area shape="rect" title=" " alt="" coords="24,288,149,315"/>
-<area shape="rect" href="structqueue__s.html" title=" " alt="" coords="7,199,78,225"/>
-<area shape="rect" title=" " alt="" coords="5,5,80,32"/>
-<area shape="rect" href="structqueue__elem__s.html" title=" " alt="" coords="83,95,189,121"/>
-<area shape="rect" title=" " alt="" coords="103,199,159,225"/>
+<area shape="rect" title=" " alt="" coords="110,364,235,391"/>
+<area shape="rect" title=" " alt="" coords="5,273,52,300"/>
+<area shape="rect" href="structqueue__s.html" title=" " alt="" coords="101,273,172,300"/>
+<area shape="rect" title=" " alt="" coords="99,5,174,32"/>
+<area shape="rect" href="structqueue__elem__s.html" title=" " alt="" coords="83,168,190,195"/>
+<area shape="rect" href="structlock__s.html" title=" " alt="" coords="283,168,343,195"/>
+<area shape="rect" title=" " alt="" coords="274,5,351,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a3ff21f335a9d6e04c143c50217585a04"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structworker__params__s.html#a3ff21f335a9d6e04c143c50217585a04">p_tasks_file_name</a></td></tr>
-<tr class="separator:a3ff21f335a9d6e04c143c50217585a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7695ab492ad6eb66512cc155b184c4"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structworker__params__s.html#a6a7695ab492ad6eb66512cc155b184c4">a_tasks_file_name</a> [MAX_PATH]</td></tr>
+<tr class="separator:a6a7695ab492ad6eb66512cc155b184c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c0a8e7a6412053b789120446f93419"><td class="memItemLeft" align="right" valign="top"><a class="el" href="queue__ext_8h.html#a1f77538d8a03d04921fd0ef2aefc7250">queue_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a></td></tr>
 <tr class="separator:a33c0a8e7a6412053b789120446f93419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac119332d5ac44045e1c7d27e23263947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lock__ext_8h.html#aaba0799f4afc3081fdefae7037d868d9">lock_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structworker__params__s.html#ac119332d5ac44045e1c7d27e23263947">p_lock_queue</a></td></tr>
+<tr class="separator:ac119332d5ac44045e1c7d27e23263947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e86a302da7bea84d2f127e64cb4e8bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lock__ext_8h.html#aaba0799f4afc3081fdefae7037d868d9">lock_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structworker__params__s.html#a2e86a302da7bea84d2f127e64cb4e8bb">p_lock_tasks_file</a></td></tr>
+<tr class="separator:a2e86a302da7bea84d2f127e64cb4e8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00034">34</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a6a7695ab492ad6eb66512cc155b184c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7695ab492ad6eb66512cc155b184c4">&#9670;&nbsp;</a></span>a_tasks_file_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char worker_params_s::a_tasks_file_name[MAX_PATH]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00036">36</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00237">create_worker()</a>, and <a class="el" href="factori_8c_source.html#l00289">worker_thread()</a>.</p>
+
+</div>
+</div>
+<a id="ac119332d5ac44045e1c7d27e23263947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac119332d5ac44045e1c7d27e23263947">&#9670;&nbsp;</a></span>p_lock_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lock__ext_8h.html#aaba0799f4afc3081fdefae7037d868d9">lock_t</a>* worker_params_s::p_lock_queue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00038">38</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00237">create_worker()</a>, <a class="el" href="factori_8c_source.html#l00029">main()</a>, and <a class="el" href="factori_8c_source.html#l00289">worker_thread()</a>.</p>
+
+</div>
+</div>
+<a id="a2e86a302da7bea84d2f127e64cb4e8bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e86a302da7bea84d2f127e64cb4e8bb">&#9670;&nbsp;</a></span>p_lock_tasks_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lock__ext_8h.html#aaba0799f4afc3081fdefae7037d868d9">lock_t</a>* worker_params_s::p_lock_tasks_file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00039">39</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00237">create_worker()</a>, <a class="el" href="factori_8c_source.html#l00029">main()</a>, and <a class="el" href="factori_8c_source.html#l00289">worker_thread()</a>.</p>
+
+</div>
+</div>
 <a id="a33c0a8e7a6412053b789120446f93419"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33c0a8e7a6412053b789120446f93419">&#9670;&nbsp;</a></span>p_queue</h2>
 
@@ -137,25 +197,7 @@ Data Fields</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00037">37</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00185">create_worker()</a>, <a class="el" href="factori_8c_source.html#l00029">main()</a>, and <a class="el" href="factori_8c_source.html#l00231">worker_thread()</a>.</p>
-
-</div>
-</div>
-<a id="a3ff21f335a9d6e04c143c50217585a04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ff21f335a9d6e04c143c50217585a04">&#9670;&nbsp;</a></span>p_tasks_file_name</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char* worker_params_s::p_tasks_file_name</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00036">36</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00185">create_worker()</a>, <a class="el" href="factori_8c_source.html#l00029">main()</a>, and <a class="el" href="factori_8c_source.html#l00231">worker_thread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00237">create_worker()</a>, <a class="el" href="factori_8c_source.html#l00029">main()</a>, and <a class="el" href="factori_8c_source.html#l00289">worker_thread()</a>.</p>
 
 </div>
 </div>
@@ -168,7 +210,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structworker__params__s.html">worker_params_s</a></li>
-    <li class="footer">Generated on Tue Dec 8 2020 20:48:13 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Wed Dec 16 2020 21:46:21 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

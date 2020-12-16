@@ -10,7 +10,7 @@ var files_dup =
     [ "file_utils.h", "file__utils_8h.html", "file__utils_8h" ],
     [ "file_utils_ext.h", "file__utils__ext_8h.html", "file__utils__ext_8h" ],
     [ "lock.c", "lock_8c.html", "lock_8c" ],
-    [ "lock.h", "lock_8h.html", null ],
+    [ "lock.h", "lock_8h.html", "lock_8h" ],
     [ "lock_ext.h", "lock__ext_8h.html", "lock__ext_8h" ],
     [ "prime.c", "prime_8c.html", "prime_8c" ],
     [ "prime_ext.h", "prime__ext_8h.html", "prime__ext_8h" ],

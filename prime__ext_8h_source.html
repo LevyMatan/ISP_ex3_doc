@@ -114,26 +114,27 @@ $(document).ready(function(){initNavTree('prime__ext_8h_source.html',''); initRe
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="trace_8h.html">trace.h</a>&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/*----------------------------------------------------------------</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">EXTERNAL TYPES</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">EXTERNAL DEFINES</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">----------------------------------------------------------------*/</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/*----------------------------------------------------------------</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">EXTERNAL FUNCTIONS</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">----------------------------------------------------------------*/</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a> <a class="code" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">PRIME_get_primes</a>(<span class="keyword">const</span> DWORD target, DWORD primes[], DWORD *num_of_primes_point);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*__PRIME_EXT_H__*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="prime__ext_8h.html#aeda79141e86c1f59251301eb61b0d3ee">   31</a></span>&#160;<span class="preprocessor">#define MAX_NUMBER_OF_PRIMES                   (30)              </span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">EXTERNAL FUNCTIONS</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">----------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a> <a class="code" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">PRIME_get_primes</a>(<span class="keyword">const</span> DWORD target, DWORD primes[], DWORD *num_of_primes_point);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*__PRIME_EXT_H__*/</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="atrace_8h_html"><div class="ttname"><a href="trace_8h.html">trace.h</a></div><div class="ttdoc">All common hardcoded data, types, and constants.</div></div>
-<div class="ttc" id="aprime__ext_8h_html_ab1cd6cee23a302a6ac6af9cd7dabb8cb"><div class="ttname"><a href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">PRIME_get_primes</a></div><div class="ttdeci">error_e PRIME_get_primes(const DWORD target, DWORD primes[], DWORD *num_of_primes_point)</div><div class="ttdoc">Get the primes object.</div><div class="ttdef"><b>Definition:</b> <a href="prime_8c_source.html#l00034">prime.c:34</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a></div><div class="ttdeci">error_e</div><div class="ttdoc">Error enumerators, when shared, allows program call to handle issues.</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00034">common_types.h:35</a></div></div>
+<div class="ttc" id="aprime__ext_8h_html_ab1cd6cee23a302a6ac6af9cd7dabb8cb"><div class="ttname"><a href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">PRIME_get_primes</a></div><div class="ttdeci">error_e PRIME_get_primes(const DWORD target, DWORD primes[], DWORD *num_of_primes_point)</div><div class="ttdoc">Get the primes object.</div><div class="ttdef"><b>Definition:</b> <a href="prime_8c_source.html#l00033">prime.c:33</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a></div><div class="ttdeci">error_e</div><div class="ttdoc">Error enumerators, when shared, allows program call to handle issues.</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00035">common_types.h:36</a></div></div>
 <div class="ttc" id="acommon__types_8h_html"><div class="ttname"><a href="common__types_8h.html">common_types.h</a></div><div class="ttdoc">All common hardcoded data, types, and constants.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_41bbe6cf917fb24e0014a8b763a4c43f.html">Ex3</a></li><li class="navelem"><a class="el" href="dir_f3eab118362eb2556e30c81da235aae4.html">Factori</a></li><li class="navelem"><a class="el" href="dir_5a3447bd14d185288e2bbd0637dced25.html">include</a></li><li class="navelem"><a class="el" href="prime__ext_8h.html">prime_ext.h</a></li>
-    <li class="footer">Generated on Tue Dec 8 2020 20:48:13 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Wed Dec 16 2020 21:46:21 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

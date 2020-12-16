@@ -106,20 +106,20 @@ Include dependency graph for factori.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="factori_8c__incl.png" border="0" usemap="#afactori_8c" alt=""/></div>
 <map name="factori_8c" id="afactori_8c">
-<area shape="rect" title="Main program file. The Ceasar program will decrypt an input file." alt="" coords="319,5,388,32"/>
-<area shape="rect" href="factori_8h.html" title="Delartion of core function to construct Ceasar program from." alt="" coords="319,80,388,107"/>
-<area shape="rect" title=" " alt="" coords="338,319,425,345"/>
-<area shape="rect" title=" " alt="" coords="745,244,807,271"/>
-<area shape="rect" href="command__line__parsing__ext_8h.html" title="Decleration and defenitions of all command line parsing related function and macros." alt="" coords="431,155,585,196"/>
-<area shape="rect" href="common__types_8h.html" title="All common hardcoded data, types, and constants." alt="" coords="221,244,344,271"/>
-<area shape="rect" href="queue__ext_8h.html" title="All exposed functions and types to be used by someone who wants to call the Ceasar lib/program." alt="" coords="25,162,119,189"/>
-<area shape="rect" href="lock__ext_8h.html" title="All exposed functions and types to be used by someone who wants to call the Ceasar lib/program." alt="" coords="143,162,225,189"/>
-<area shape="rect" href="file__utils__ext_8h.html" title=" " alt="" coords="300,162,407,189"/>
-<area shape="rect" href="prime__ext_8h.html" title="TODO: Vladimir." alt="" coords="609,162,700,189"/>
-<area shape="rect" href="trace_8h.html" title="All common hardcoded data, types, and constants." alt="" coords="635,244,698,271"/>
-<area shape="rect" title=" " alt="" coords="549,244,611,271"/>
-<area shape="rect" title=" " alt="" coords="679,319,745,345"/>
-<area shape="rect" title=" " alt="" coords="589,319,654,345"/>
+<area shape="rect" title="Main program file. The Ceasar program will decrypt an input file." alt="" coords="367,5,436,32"/>
+<area shape="rect" href="factori_8h.html" title="Delartion of core function to construct Ceasar program from." alt="" coords="367,80,436,107"/>
+<area shape="rect" title=" " alt="" coords="358,319,445,345"/>
+<area shape="rect" title=" " alt="" coords="744,244,806,271"/>
+<area shape="rect" href="command__line__parsing__ext_8h.html" title="Decleration and defenitions of all command line parsing related function and macros." alt="" coords="324,155,479,196"/>
+<area shape="rect" href="common__types_8h.html" title="All common hardcoded data, types, and constants." alt="" coords="238,244,360,271"/>
+<area shape="rect" href="queue__ext_8h.html" title="All exposed functions and types to be used by someone who wants to call the Ceasar lib/program." alt="" coords="503,162,596,189"/>
+<area shape="rect" href="trace_8h.html" title="All common hardcoded data, types, and constants." alt="" coords="634,244,697,271"/>
+<area shape="rect" href="lock__ext_8h.html" title="All exposed functions and types to be used by someone who wants to call the Ceasar lib/program." alt="" coords="36,162,119,189"/>
+<area shape="rect" href="file__utils__ext_8h.html" title=" " alt="" coords="143,162,250,189"/>
+<area shape="rect" href="prime__ext_8h.html" title="TODO: Vladimir." alt="" coords="620,162,711,189"/>
+<area shape="rect" title=" " alt="" coords="587,319,654,345"/>
+<area shape="rect" title=" " alt="" coords="678,319,744,345"/>
+<area shape="rect" title=" " alt="" coords="548,244,610,271"/>
 </map>
 </div>
 </div>
@@ -189,45 +189,51 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>error_e </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="factori_8c_source.html#l00185">185</a> of file <a class="el" href="factori_8c_source.html">factori.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">// Debug Prefix /////////////</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a>();</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="trace_8h.html#a04f52cd3d2fada8961ec1d353ac5509d">DEBUG_PRINT_ARG</a>(<span class="stringliteral">&quot;Input file name : %s\n&quot;</span>, p_worker_param-&gt;<a class="code" href="structworker__params__s.html#a3ff21f335a9d6e04c143c50217585a04">p_tasks_file_name</a>);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="queue__ext_8h.html#afa81aaef004c00ea3f90c1b7cd2317e5">DEBUG_PRINT_QUEUE_STATUS</a>(p_worker_param-&gt;<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a>);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a> e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c">ERROR_OK</a>;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">if</span>((NULL == p_worker_handle) || (NULL == p_worker_param) || (NULL == p_worker_param-&gt;<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a>) || (NULL == p_worker_param-&gt;<a class="code" href="structworker__params__s.html#a3ff21f335a9d6e04c143c50217585a04">p_tasks_file_name</a>))</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Recieved invalid parameters!\n&quot;</span>);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a0b228f1b329d42635ff838109be43b6a">ERROR_INVALID_PARAM_E</a>;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        LPDWORD p_thread_id = NULL;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        (*p_worker_handle) = CreateThread(</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            NULL,                               <span class="comment">/*  default security attributes */</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            0,                                  <span class="comment">/*  use default stack size */</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <a class="code" href="factori_8c.html#acc1487cb2f24894cf9c48a718c302503">worker_thread</a>,                      <span class="comment">/*  thread function */</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            p_worker_param,                     <span class="comment">/*  argument to thread function */</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            0,                                  <span class="comment">/*  use default creation flags */</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            p_thread_id);                       <span class="comment">/*  returns the thread identifier */</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">if</span> (NULL == (*p_worker_handle))</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Error when creating thread\n&quot;</span>);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a2c94b966c744d2ac7c5954e07ee61c47">ERROR_FAILED_TO_CREATE_THREAD_E</a>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        }</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">// Debug Suffix /////////////</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a>();</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">return</span> e_status;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="factori_8c_source.html#l00237">237</a> of file <a class="el" href="factori_8c_source.html">factori.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;{</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="comment">// Debug Prefix /////////////</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a>();</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="trace_8h.html#a04f52cd3d2fada8961ec1d353ac5509d">DEBUG_PRINT_ARG</a>(<span class="stringliteral">&quot;Input file name : %s\n&quot;</span>, p_worker_param-&gt;<a class="code" href="structworker__params__s.html#a6a7695ab492ad6eb66512cc155b184c4">a_tasks_file_name</a>);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="queue__ext_8h.html#afa81aaef004c00ea3f90c1b7cd2317e5">DEBUG_PRINT_QUEUE_STATUS</a>(p_worker_param-&gt;<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a> e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c">ERROR_OK</a>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">if</span>( (NULL == p_worker_handle)                  || </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        (NULL == p_worker_param)                   || </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        (NULL == p_worker_param-&gt;<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a>)          || </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        (NULL == p_worker_param-&gt;<a class="code" href="structworker__params__s.html#a6a7695ab492ad6eb66512cc155b184c4">a_tasks_file_name</a>)|| </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        (NULL == p_worker_param-&gt;<a class="code" href="structworker__params__s.html#ac119332d5ac44045e1c7d27e23263947">p_lock_queue</a>)     ||</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        (NULL == p_worker_param-&gt;<a class="code" href="structworker__params__s.html#a2e86a302da7bea84d2f127e64cb4e8bb">p_lock_tasks_file</a>)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        )                              </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Recieved invalid parameters!\n&quot;</span>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a0b228f1b329d42635ff838109be43b6a">ERROR_INVALID_PARAM_E</a>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        LPDWORD p_thread_id = NULL;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        (*p_worker_handle) = CreateThread(</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            NULL,                               <span class="comment">/*  default security attributes */</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            0,                                  <span class="comment">/*  use default stack size */</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <a class="code" href="factori_8c.html#acc1487cb2f24894cf9c48a718c302503">worker_thread</a>,                      <span class="comment">/*  thread function */</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            p_worker_param,                     <span class="comment">/*  argument to thread function */</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            0,                                  <span class="comment">/*  use default creation flags */</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            p_thread_id);                       <span class="comment">/*  returns the thread identifier */</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">if</span> (NULL == (*p_worker_handle))</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Error when creating thread\n&quot;</span>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a2c94b966c744d2ac7c5954e07ee61c47">ERROR_FAILED_TO_CREATE_THREAD_E</a>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">// Debug Suffix /////////////</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <a class="code" href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a>();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">return</span> e_status;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="trace_8h_source.html#l00157">DEBUG_PRINT_ARG</a>, <a class="el" href="trace_8h_source.html#l00159">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00158">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="queue__ext_8h_source.html#l00031">DEBUG_PRINT_QUEUE_STATUS</a>, <a class="el" href="common__types_8h_source.html#l00067">ERROR_FAILED_TO_CREATE_THREAD_E</a>, <a class="el" href="common__types_8h_source.html#l00039">ERROR_INVALID_PARAM_E</a>, <a class="el" href="common__types_8h_source.html#l00037">ERROR_OK</a>, <a class="el" href="factori_8h_source.html#l00037">worker_params_s::p_queue</a>, <a class="el" href="factori_8h_source.html#l00036">worker_params_s::p_tasks_file_name</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, and <a class="el" href="factori_8c_source.html#l00231">worker_thread()</a>.</p>
+<p class="reference">References <a class="el" href="factori_8h_source.html#l00036">worker_params_s::a_tasks_file_name</a>, <a class="el" href="trace_8h_source.html#l00148">DEBUG_PRINT_ARG</a>, <a class="el" href="trace_8h_source.html#l00160">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00154">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="queue__ext_8h_source.html#l00033">DEBUG_PRINT_QUEUE_STATUS</a>, <a class="el" href="common__types_8h_source.html#l00069">ERROR_FAILED_TO_CREATE_THREAD_E</a>, <a class="el" href="common__types_8h_source.html#l00040">ERROR_INVALID_PARAM_E</a>, <a class="el" href="common__types_8h_source.html#l00038">ERROR_OK</a>, <a class="el" href="factori_8h_source.html#l00038">worker_params_s::p_lock_queue</a>, <a class="el" href="factori_8h_source.html#l00039">worker_params_s::p_lock_tasks_file</a>, <a class="el" href="factori_8h_source.html#l00037">worker_params_s::p_queue</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, and <a class="el" href="factori_8c_source.html#l00289">worker_thread()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00029">main()</a>.</p>
 <div class="dynheader">
@@ -235,17 +241,21 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="factori_8c_ad0a6e0d0a136e229ecf00fd6593c402e_cgraph.png" border="0" usemap="#afactori_8c_ad0a6e0d0a136e229ecf00fd6593c402e_cgraph" alt=""/></div>
 <map name="factori_8c_ad0a6e0d0a136e229ecf00fd6593c402e_cgraph" id="afactori_8c_ad0a6e0d0a136e229ecf00fd6593c402e_cgraph">
-<area shape="rect" title="Create a worker object: Packs parameters into a struct, and calls CreateThread." alt="" coords="5,224,109,251"/>
-<area shape="rect" href="factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title=" " alt="" coords="157,224,261,251"/>
+<area shape="rect" title="Create a worker object: Packs parameters into a struct, and calls CreateThread." alt="" coords="5,329,109,356"/>
+<area shape="rect" href="factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title=" " alt="" coords="157,329,261,356"/>
 <area shape="rect" href="file__utils__ext_8h.html#aa61cde9f0eda8ca94b81c2b9ea7efcd9" title="The function prints a line into a buffer according to requirments." alt="" coords="338,5,466,32"/>
 <area shape="rect" href="file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f" title="Creates a file handle for shared Read and WRITE." alt="" coords="309,57,495,98"/>
 <area shape="rect" href="file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32" title="Read a single line, that is, all charecters until \r &#160;(including). Outputs the number of charcters th..." alt="" coords="325,122,479,163"/>
 <area shape="rect" href="file__utils__ext_8h.html#a6ba806c9791793d2e17d9c65745589ad" title=" " alt="" coords="317,187,487,229"/>
-<area shape="rect" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb" title="Get the primes object." alt="" coords="334,253,470,280"/>
-<area shape="rect" href="queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="345,304,459,331"/>
-<area shape="rect" href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="353,355,451,381"/>
-<area shape="rect" href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="355,405,449,432"/>
-<area shape="rect" href="queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="543,355,705,381"/>
+<area shape="rect" href="lock__ext_8h.html#ad998fe7d10043d8d0119913c1104f131" title=" " alt="" coords="341,253,463,280"/>
+<area shape="rect" href="lock__ext_8h.html#a387d3cd06fb2999414bd1c60a0214649" title=" " alt="" coords="333,304,471,331"/>
+<area shape="rect" href="lock__ext_8h.html#a5d3201469d7c49626a752c11c7760b10" title=" " alt="" coords="340,355,464,381"/>
+<area shape="rect" href="lock__ext_8h.html#a83e03a05b849ad0ca826de75fe29b2cb" title=" " alt="" coords="331,405,473,432"/>
+<area shape="rect" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb" title="Get the primes object." alt="" coords="334,456,470,483"/>
+<area shape="rect" href="queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="345,507,459,533"/>
+<area shape="rect" href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="353,557,451,584"/>
+<area shape="rect" href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="355,608,449,635"/>
+<area shape="rect" href="queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="543,557,705,584"/>
 </map>
 </div>
 <div class="dynheader">
@@ -296,6 +306,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 <p>&lt; A pointer to the queue which will hold the task offsets in the task file.</p>
+<p>&lt; A pointer to the lock which will hold the synchronization enteties: mutexes and semaphores..</p>
+<p>&lt; A pointer to the lock which will hold the synchronization enteties: mutexes and semaphores..</p>
 <p>&lt; The priority file handle</p>
 <p>&lt; The task file handle</p>
 <p>&lt; A pointer to an array of HANDLE for the "workers" - threads that will process the tasks.</p>
@@ -309,171 +321,230 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="structfactori__args__s.html">factori_args_t</a> command_line_args;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="structqueue__s.html">queue_t</a>         *p_task_priority_queue      = NULL;  </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    HANDLE          priority_file_handle        = NULL;  </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    HANDLE          task_file_handle            = NULL;  </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    HANDLE          *pa_working_threads_handles = NULL;  </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="structworker__params__s.html">worker_params_t</a> *p_workers_params           = NULL;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">/*------------------------------</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">        * Parse command line to parameters</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">        * ---------------------------*/</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        e_status = <a class="code" href="command__line__parsing__ext_8h.html#a48746ebf755019b062fe43d17259c7ef">parse_command_line_input</a>(argc, argv, &amp;command_line_args);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">/*------------------------------</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">        * Initialize priority queue</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">        * ---------------------------*/</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">// Init queue struct</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        p_task_priority_queue = <a class="code" href="queue__ext_8h.html#a8777304a9bca1e8917a46edd1e4209aa">QUEUE_initialize_queue</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">// Open priority file</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        e_status = <a class="code" href="file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f">FILE_UTILS_create_file_for_shared_read_and_write</a>(&amp;priority_file_handle, command_line_args.<a class="code" href="structfactori__args__s.html#a05369ef03cb7e97fd2a5448fa4993efb">p_priority_file_name</a>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">const</span> DWORD priorities_file_size = GetFileSize(priority_file_handle, NULL);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// for each line, read the line digits, convert to a number and add it to queue</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        DWORD        current_position = 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        DWORD        bytes_read       = 0;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="structqueue__elem__s.html">queue_elem_t</a> new_element      = <a class="code" href="queue__ext_8h.html#a1674fd68ced4f60de29e1089924f2614">NULL_QUEUE_ELEMENT</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">while</span>(current_position &lt; priorities_file_size)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            e_status = <a class="code" href="file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32">FILE_UTILS_read_one_line_from_file</a>(priority_file_handle, &amp;bytes_read, &amp;new_element.<a class="code" href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">data</a>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            e_status =  <a class="code" href="queue__ext_8h.html#a8b324b766f9ec79f8a6b8d7f54cd9d30">QUEUE_push</a>(p_task_priority_queue, new_element);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            current_position += bytes_read;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">// get task file size, will be used to read line by line (ReadFile does not stop at EOF)</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        e_status = <a class="code" href="file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f">FILE_UTILS_create_file_for_shared_read_and_write</a>(&amp;task_file_handle, command_line_args.<a class="code" href="structfactori__args__s.html#add68cf3a4d93205fcfeec93f90f30c63">p_task_file_name</a>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">const</span> DWORD tasks_file_size = GetFileSize(task_file_handle, NULL);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span>(task_file_handle &amp;&amp; (task_file_handle != INVALID_HANDLE_VALUE))</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            CloseHandle(task_file_handle);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            task_file_handle = NULL;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="file__utils__ext_8h.html#aa7d90eddf0161c6ee6b16f7cf59d6525">FILE_UTILS_set_write_position</a>(tasks_file_size);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="structlock__s.html">lock_t</a>          *p_lock_queue               = NULL;  </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="structlock__s.html">lock_t</a>          *p_lock_tasks_file          = NULL;  </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    HANDLE          priority_file_handle        = NULL;  </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    HANDLE          task_file_handle            = NULL;  </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    HANDLE          *pa_working_threads_handles = NULL;  </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="structworker__params__s.html">worker_params_t</a> *p_workers_params           = NULL;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">/*------------------------------</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">        * Parse command line to parameters</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">        * ---------------------------*/</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        e_status = <a class="code" href="command__line__parsing__ext_8h.html#a48746ebf755019b062fe43d17259c7ef">parse_command_line_input</a>(argc, argv, &amp;command_line_args);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a> == 0)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">/*------------------------------</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">        * Initialize priority queue</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">        * ---------------------------*/</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">// Init queue struct</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        p_task_priority_queue = <a class="code" href="queue__ext_8h.html#a8777304a9bca1e8917a46edd1e4209aa">QUEUE_initialize_queue</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span>(NULL == p_task_priority_queue)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a8407b9556d8eb7b5c96f75bf6cc1e022">ERROR_FAILES_TO_INITIALIZE_QUEUE_E</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// Init lock struct</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        p_lock_queue = <a class="code" href="lock__ext_8h.html#a1438450e8ec75fb3feb6ce67a503d779">LOCK_initialize_lock</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span>(NULL == p_lock_queue)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Failed to initialize queue lock!\n&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232abe2a47cd38e8d32957f81c49d39784d0">ERROR_FAILES_TO_INITIALIZE_LOCK_E</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        p_lock_tasks_file = <a class="code" href="lock__ext_8h.html#a1438450e8ec75fb3feb6ce67a503d779">LOCK_initialize_lock</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span>(NULL == p_lock_tasks_file)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Failed to initialize tasks file lock!\n&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232abe2a47cd38e8d32957f81c49d39784d0">ERROR_FAILES_TO_INITIALIZE_LOCK_E</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// Open priority file</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        e_status = <a class="code" href="file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f">FILE_UTILS_create_file_for_shared_read_and_write</a>(&amp;priority_file_handle, command_line_args.<a class="code" href="structfactori__args__s.html#a05369ef03cb7e97fd2a5448fa4993efb">p_priority_file_name</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">const</span> DWORD priorities_file_size = GetFileSize(priority_file_handle, NULL);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">/*------------------------------</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">        * Call workers (threads)</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">        * ---------------------------*/</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        pa_working_threads_handles = malloc(command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a> * <span class="keyword">sizeof</span>(HANDLE));</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span>(NULL == pa_working_threads_handles)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// for each line, read the line digits, convert to a number and add it to queue</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        DWORD        current_position = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        DWORD        bytes_read       = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="structqueue__elem__s.html">queue_elem_t</a> new_element      = <a class="code" href="queue__ext_8h.html#a1674fd68ced4f60de29e1089924f2614">NULL_QUEUE_ELEMENT</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">while</span>(current_position &lt; priorities_file_size)</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Failed to allocate memory for workers handles\n&quot;</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a5ffa8953d8668e40c26f99ba884847b8">ERROR_FAILED_TO_ALLOCATE_MEMORY_E</a>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        p_workers_params           = malloc(command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a> * <span class="keyword">sizeof</span>(<a class="code" href="structworker__params__s.html">worker_params_t</a>));</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span>(NULL == p_workers_params)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Failed to allocate memory for workers params\n&quot;</span>);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a5ffa8953d8668e40c26f99ba884847b8">ERROR_FAILED_TO_ALLOCATE_MEMORY_E</a>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#a8ff10b75745acf0409de91ac1db60a20">DEBUG_LEVEL_FIVE</a>, <span class="stringliteral">&quot;Starting to call workers. Total number: %d\n&quot;</span>, command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">for</span>(DWORD worker_idx = 0; worker_idx &lt; command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a>; worker_idx++)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            e_status = <a class="code" href="file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32">FILE_UTILS_read_one_line_from_file</a>(priority_file_handle, &amp;bytes_read, &amp;new_element.<a class="code" href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">data</a>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            e_status =  <a class="code" href="queue__ext_8h.html#a8b324b766f9ec79f8a6b8d7f54cd9d30">QUEUE_push</a>(p_task_priority_queue, new_element);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            current_position += bytes_read;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">// get task file size, will be used to read line by line (ReadFile does not stop at EOF)</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        e_status = <a class="code" href="file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f">FILE_UTILS_create_file_for_shared_read_and_write</a>(&amp;task_file_handle, command_line_args.<a class="code" href="structfactori__args__s.html#a0ae7de72f63571717d15a5668b83c8df">a_task_file_name</a>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">const</span> DWORD tasks_file_size = GetFileSize(task_file_handle, NULL);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span>(task_file_handle &amp;&amp; (task_file_handle != INVALID_HANDLE_VALUE))</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            p_workers_params[worker_idx].<a class="code" href="structworker__params__s.html#a3ff21f335a9d6e04c143c50217585a04">p_tasks_file_name</a> = command_line_args.<a class="code" href="structfactori__args__s.html#add68cf3a4d93205fcfeec93f90f30c63">p_task_file_name</a>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            p_workers_params[worker_idx].<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a> = p_task_priority_queue;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            pa_working_threads_handles[worker_idx] = NULL;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            e_status = <a class="code" href="factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e">create_worker</a>(&amp;pa_working_threads_handles[worker_idx], &amp;p_workers_params[worker_idx]);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    } <span class="keywordflow">while</span> (FALSE);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">/*------------------------------</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">    * Cleanup: Free memory, Close handles</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">    * ---------------------------*/</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span>(pa_working_threads_handles)</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        WaitForMultipleObjects(command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a>, pa_working_threads_handles, TRUE, INFINITE);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">for</span>(DWORD worker_idx = 0; worker_idx &lt; command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a>; worker_idx++)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">if</span>(pa_working_threads_handles[worker_idx])</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                BOOL get_exit_code_stat = GetExitCodeThread(</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                    pa_working_threads_handles[worker_idx],</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    (LPDWORD)(&amp;e_status)</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    );</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordflow">if</span>(FALSE == get_exit_code_stat)</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232ab090e5181dad1d2fc22dbdc768af5c54">ERROR_FAILED_TO_GET_THREAD_EXIT_CODE_E</a>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Failed to get thread %d exit code\n&quot;</span>, worker_idx);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">for</span>(DWORD worker_idx = 0; worker_idx &lt; command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a>; worker_idx++)</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">if</span>(pa_working_threads_handles[worker_idx])</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                CloseHandle(pa_working_threads_handles[worker_idx]);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                pa_working_threads_handles[worker_idx] = NULL;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        free(pa_working_threads_handles);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">if</span>(p_task_priority_queue)</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    {</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        e_status += <a class="code" href="queue__ext_8h.html#a404707c34930328e4b2bdcd53e600c79">QUEUE_destroy_queue</a>(&amp;p_task_priority_queue);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">if</span>(priority_file_handle)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        CloseHandle(priority_file_handle);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        priority_file_handle = NULL;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span>(task_file_handle &amp;&amp; (task_file_handle != INVALID_HANDLE_VALUE))</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        CloseHandle(task_file_handle);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        task_file_handle = NULL;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">if</span>(p_workers_params)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            CloseHandle(task_file_handle);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            task_file_handle = NULL;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="file__utils__ext_8h.html#aa7d90eddf0161c6ee6b16f7cf59d6525">FILE_UTILS_set_write_position</a>(tasks_file_size);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">/*------------------------------</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">        * Call workers (threads)</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">        * ---------------------------*/</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">if</span> (command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a> == 0)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        pa_working_threads_handles = malloc(command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a> * <span class="keyword">sizeof</span>(HANDLE));</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">if</span>(NULL == pa_working_threads_handles)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Failed to allocate memory for workers handles\n&quot;</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a5ffa8953d8668e40c26f99ba884847b8">ERROR_FAILED_TO_ALLOCATE_MEMORY_E</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        p_workers_params           = malloc(command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a> * <span class="keyword">sizeof</span>(<a class="code" href="structworker__params__s.html">worker_params_t</a>));</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">if</span>(NULL == p_workers_params)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Failed to allocate memory for workers params\n&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a5ffa8953d8668e40c26f99ba884847b8">ERROR_FAILED_TO_ALLOCATE_MEMORY_E</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <a class="code" href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#a8ff10b75745acf0409de91ac1db60a20">DEBUG_LEVEL_FIVE</a>, <span class="stringliteral">&quot;Starting to call workers. Total number: %d\n&quot;</span>, command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a>);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">for</span>(DWORD worker_idx = 0; worker_idx &lt; command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a>; worker_idx++)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">if</span> (command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a> != 0)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                errno_t strcpy_status = strcpy_s(p_workers_params[worker_idx].a_tasks_file_name, MAX_PATH, command_line_args.<a class="code" href="structfactori__args__s.html#a0ae7de72f63571717d15a5668b83c8df">a_task_file_name</a>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keywordflow">if</span>(strcpy_status)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Failed to copy string of task file\n&quot;</span>)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a476a73158bf7252482fc4ce97e1fa3f0">ERROR_STRCPY_FAILED_E</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                p_workers_params[worker_idx].p_queue              = p_task_priority_queue;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                p_workers_params[worker_idx].p_lock_queue         = p_lock_queue;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                p_workers_params[worker_idx].p_lock_tasks_file    = p_lock_tasks_file;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                pa_working_threads_handles[worker_idx]            = NULL;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                e_status = <a class="code" href="factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e">create_worker</a>(&amp;pa_working_threads_handles[worker_idx], &amp;p_workers_params[worker_idx]);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    } while (FALSE);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">/*------------------------------</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">    * Cleanup: Free memory, Close handles</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">    * ---------------------------*/</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    if(pa_working_threads_handles)</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        free(p_workers_params);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> e_status;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        DWORD status = WaitForMultipleObjects(command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a>, pa_working_threads_handles, TRUE, 10000);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <a class="code" href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#adab028ad33c1ace2ad2bc51c6aad0ac4">DEBUG_LEVEL_ONE</a>, <span class="stringliteral">&quot;WaitForMultipleObjects returned with status: %d\n&quot;</span>, status);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">for</span>(DWORD worker_idx = 0; worker_idx &lt; command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a>; worker_idx++)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">if</span>(pa_working_threads_handles[worker_idx])</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                BOOL get_exit_code_stat = GetExitCodeThread(</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    pa_working_threads_handles[worker_idx],</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                    (LPDWORD)(&amp;e_status)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                    );</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="keywordflow">if</span>(FALSE == get_exit_code_stat)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232ab090e5181dad1d2fc22dbdc768af5c54">ERROR_FAILED_TO_GET_THREAD_EXIT_CODE_E</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                    <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Failed to get thread %d exit code\n&quot;</span>, worker_idx);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">for</span>(DWORD worker_idx = 0; worker_idx &lt; command_line_args.<a class="code" href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">num_of_threads</a>; worker_idx++)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">if</span>(pa_working_threads_handles[worker_idx])</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                CloseHandle(pa_working_threads_handles[worker_idx]);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                pa_working_threads_handles[worker_idx] = NULL;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        free(pa_working_threads_handles);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span>(p_task_priority_queue)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        e_status += <a class="code" href="queue__ext_8h.html#a404707c34930328e4b2bdcd53e600c79">QUEUE_destroy_queue</a>(&amp;p_task_priority_queue);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">if</span>(p_lock_tasks_file)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        e_status += <a class="code" href="lock__ext_8h.html#a574e3fa24bc964d06eb31813fe80eae0">LOCK_destroy_lock</a>(&amp;p_lock_tasks_file);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">if</span>(p_lock_queue)</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        e_status += <a class="code" href="lock__ext_8h.html#a574e3fa24bc964d06eb31813fe80eae0">LOCK_destroy_lock</a>(&amp;p_lock_queue);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">if</span>(priority_file_handle)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        CloseHandle(priority_file_handle);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        priority_file_handle = NULL;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">if</span>(task_file_handle &amp;&amp; (task_file_handle != INVALID_HANDLE_VALUE))</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        CloseHandle(task_file_handle);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        task_file_handle = NULL;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">if</span>(p_workers_params)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        free(p_workers_params);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> e_status;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="trace_8h_source.html#l00052">CHECK_AND_BREAK</a>, <a class="el" href="factori_8c_source.html#l00185">create_worker()</a>, <a class="el" href="queue__ext_8h_source.html#l00040">queue_elem_s::data</a>, <a class="el" href="trace_8h_source.html#l00089">DEBUG_LEVEL_FIVE</a>, <a class="el" href="trace_8h_source.html#l00156">DEBUG_PRINT</a>, <a class="el" href="common__types_8h_source.html#l00040">ERROR_FAILED_TO_ALLOCATE_MEMORY_E</a>, <a class="el" href="common__types_8h_source.html#l00068">ERROR_FAILED_TO_GET_THREAD_EXIT_CODE_E</a>, <a class="el" href="file__utils_8c_source.html#l00135">FILE_UTILS_create_file_for_shared_read_and_write()</a>, <a class="el" href="file__utils_8c_source.html#l00048">FILE_UTILS_read_one_line_from_file()</a>, <a class="el" href="file__utils_8c_source.html#l00030">FILE_UTILS_set_write_position()</a>, <a class="el" href="queue__ext_8h_source.html#l00026">NULL_QUEUE_ELEMENT</a>, <a class="el" href="command__line__parsing__ext_8h_source.html#l00031">factori_args_s::num_of_threads</a>, <a class="el" href="command__line__parsing__ext_8h_source.html#l00030">factori_args_s::p_priority_file_name</a>, <a class="el" href="factori_8h_source.html#l00037">worker_params_s::p_queue</a>, <a class="el" href="command__line__parsing__ext_8h_source.html#l00029">factori_args_s::p_task_file_name</a>, <a class="el" href="factori_8h_source.html#l00036">worker_params_s::p_tasks_file_name</a>, <a class="el" href="command__line__parsing_8c_source.html#l00041">parse_command_line_input()</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, <a class="el" href="queue_8c_source.html#l00234">QUEUE_destroy_queue()</a>, <a class="el" href="queue_8c_source.html#l00031">QUEUE_initialize_queue()</a>, and <a class="el" href="queue_8c_source.html#l00151">QUEUE_push()</a>.</p>
+<p class="reference">References <a class="el" href="command__line__parsing__ext_8h_source.html#l00029">factori_args_s::a_task_file_name</a>, <a class="el" href="trace_8h_source.html#l00052">CHECK_AND_BREAK</a>, <a class="el" href="factori_8c_source.html#l00237">create_worker()</a>, <a class="el" href="queue__ext_8h_source.html#l00045">queue_elem_s::data</a>, <a class="el" href="trace_8h_source.html#l00089">DEBUG_LEVEL_FIVE</a>, <a class="el" href="trace_8h_source.html#l00085">DEBUG_LEVEL_ONE</a>, <a class="el" href="trace_8h_source.html#l00132">DEBUG_PRINT</a>, <a class="el" href="common__types_8h_source.html#l00041">ERROR_FAILED_TO_ALLOCATE_MEMORY_E</a>, <a class="el" href="common__types_8h_source.html#l00070">ERROR_FAILED_TO_GET_THREAD_EXIT_CODE_E</a>, <a class="el" href="common__types_8h_source.html#l00075">ERROR_FAILES_TO_INITIALIZE_LOCK_E</a>, <a class="el" href="common__types_8h_source.html#l00066">ERROR_FAILES_TO_INITIALIZE_QUEUE_E</a>, <a class="el" href="common__types_8h_source.html#l00048">ERROR_STRCPY_FAILED_E</a>, <a class="el" href="file__utils_8c_source.html#l00135">FILE_UTILS_create_file_for_shared_read_and_write()</a>, <a class="el" href="file__utils_8c_source.html#l00048">FILE_UTILS_read_one_line_from_file()</a>, <a class="el" href="file__utils_8c_source.html#l00030">FILE_UTILS_set_write_position()</a>, <a class="el" href="lock_8c_source.html#l00275">LOCK_destroy_lock()</a>, <a class="el" href="lock_8c_source.html#l00025">LOCK_initialize_lock()</a>, <a class="el" href="queue__ext_8h_source.html#l00027">NULL_QUEUE_ELEMENT</a>, <a class="el" href="command__line__parsing__ext_8h_source.html#l00031">factori_args_s::num_of_threads</a>, <a class="el" href="factori_8h_source.html#l00038">worker_params_s::p_lock_queue</a>, <a class="el" href="factori_8h_source.html#l00039">worker_params_s::p_lock_tasks_file</a>, <a class="el" href="command__line__parsing__ext_8h_source.html#l00030">factori_args_s::p_priority_file_name</a>, <a class="el" href="factori_8h_source.html#l00037">worker_params_s::p_queue</a>, <a class="el" href="command__line__parsing_8c_source.html#l00041">parse_command_line_input()</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, <a class="el" href="queue_8c_source.html#l00234">QUEUE_destroy_queue()</a>, <a class="el" href="queue_8c_source.html#l00031">QUEUE_initialize_queue()</a>, and <a class="el" href="queue_8c_source.html#l00151">QUEUE_push()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="factori_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#afactori_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
 <map name="factori_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="afactori_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
-<area shape="rect" title="&lt; When we want to test a specific function/ scenario compile with that flag, when done,..." alt="" coords="5,426,56,453"/>
-<area shape="rect" href="factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e" title="Create a worker object: Packs parameters into a struct, and calls CreateThread." alt="" coords="135,250,239,277"/>
+<area shape="rect" title="&lt; When we want to test a specific function/ scenario compile with that flag, when done,..." alt="" coords="5,739,56,766"/>
+<area shape="rect" href="factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e" title="Create a worker object: Packs parameters into a struct, and calls CreateThread." alt="" coords="135,474,239,501"/>
 <area shape="rect" href="file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f" title="Creates a file handle for shared Read and WRITE." alt="" coords="529,5,715,47"/>
-<area shape="rect" href="file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32" title="Read a single line, that is, all charecters until \r &#160;(including). Outputs the number of charcters th..." alt="" coords="545,392,699,433"/>
-<area shape="rect" href="file__utils__ext_8h.html#aa7d90eddf0161c6ee6b16f7cf59d6525" title="Set global file position for writing." alt="" coords="110,385,265,427"/>
-<area shape="rect" href="command__line__parsing__ext_8h.html#a48746ebf755019b062fe43d17259c7ef" title="parsing the command line, validates input integrity and fills the arg structure. CAUTION: This functi..." alt="" coords="115,451,260,492"/>
-<area shape="rect" href="queue__ext_8h.html#a404707c34930328e4b2bdcd53e600c79" title=" " alt="" coords="319,559,481,586"/>
-<area shape="rect" href="queue__ext_8h.html#a8777304a9bca1e8917a46edd1e4209aa" title="Initiliaze a new queue struct. The new queue will be initialized as empty, that is,..." alt="" coords="104,567,271,594"/>
-<area shape="rect" href="queue__ext_8h.html#a8b324b766f9ec79f8a6b8d7f54cd9d30" title="Add a queue element to queue as the p_last_elem element, will also be the p_first_elem if queue was e..." alt="" coords="135,618,240,645"/>
-<area shape="rect" href="factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title=" " alt="" coords="348,239,452,266"/>
-<area shape="rect" href="file__utils__ext_8h.html#aa61cde9f0eda8ca94b81c2b9ea7efcd9" title="The function prints a line into a buffer according to requirments." alt="" coords="558,71,686,98"/>
-<area shape="rect" href="file__utils__ext_8h.html#a6ba806c9791793d2e17d9c65745589ad" title=" " alt="" coords="537,123,707,164"/>
-<area shape="rect" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb" title="Get the primes object." alt="" coords="554,189,690,215"/>
-<area shape="rect" href="queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="565,239,679,266"/>
-<area shape="rect" href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="573,290,671,317"/>
-<area shape="rect" href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="575,341,669,367"/>
-<area shape="rect" href="queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="763,425,925,451"/>
-<area shape="rect" href="command__line__parsing_8c.html#abec7de20c29cd0444d46f8c5af93e301" title="converts string to int. Validates string has only numbers." alt="" coords="329,407,471,434"/>
-<area shape="rect" href="command__line__parsing_8c.html#a8b53c718f6779378d21946d66ca14ec4" title="converts string to int. Validates string has only numbers." alt="" coords="323,458,477,485"/>
-<area shape="rect" href="command__line__parsing_8c.html#a3e2c45f563fe312051564da5922fc741" title="print the command line usage for Factori program." alt="" coords="339,509,461,535"/>
-<area shape="rect" href="command__line__parsing_8c.html#ad785d9d76730f07ca1ce0f5797ca178d" title="Get the int from string object extract digits character from string." alt="" coords="555,458,689,485"/>
-<area shape="rect" href="queue_8c.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="565,559,679,586"/>
-<area shape="rect" href="queue_8c.html#a367f4872ef35f4e649ab1da4da1626c1" title="Allocate memory for a queue element and set the data with input parameter Return the pointer to the n..." alt="" coords="323,661,477,703"/>
+<area shape="rect" href="file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32" title="Read a single line, that is, all charecters until \r &#160;(including). Outputs the number of charcters th..." alt="" coords="545,71,699,112"/>
+<area shape="rect" href="file__utils__ext_8h.html#aa7d90eddf0161c6ee6b16f7cf59d6525" title="Set global file position for writing." alt="" coords="110,761,265,803"/>
+<area shape="rect" href="lock__ext_8h.html#a574e3fa24bc964d06eb31813fe80eae0" title=" " alt="" coords="118,827,257,854"/>
+<area shape="rect" href="lock__ext_8h.html#a1438450e8ec75fb3feb6ce67a503d779" title=" " alt="" coords="116,878,259,905"/>
+<area shape="rect" href="command__line__parsing__ext_8h.html#a48746ebf755019b062fe43d17259c7ef" title="parsing the command line, validates input integrity and fills the arg structure. CAUTION: This functi..." alt="" coords="115,929,260,971"/>
+<area shape="rect" href="queue__ext_8h.html#a404707c34930328e4b2bdcd53e600c79" title=" " alt="" coords="319,659,481,686"/>
+<area shape="rect" href="queue__ext_8h.html#a8777304a9bca1e8917a46edd1e4209aa" title="Initiliaze a new queue struct. The new queue will be initialized as empty, that is,..." alt="" coords="104,995,271,1022"/>
+<area shape="rect" href="queue__ext_8h.html#a8b324b766f9ec79f8a6b8d7f54cd9d30" title="Add a queue element to queue as the p_last_elem element, will also be the p_first_elem if queue was e..." alt="" coords="135,710,240,737"/>
+<area shape="rect" href="factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title=" " alt="" coords="348,339,452,366"/>
+<area shape="rect" href="file__utils__ext_8h.html#aa61cde9f0eda8ca94b81c2b9ea7efcd9" title="The function prints a line into a buffer according to requirments." alt="" coords="558,339,686,366"/>
+<area shape="rect" href="file__utils__ext_8h.html#a6ba806c9791793d2e17d9c65745589ad" title=" " alt="" coords="537,391,707,432"/>
+<area shape="rect" href="lock__ext_8h.html#ad998fe7d10043d8d0119913c1104f131" title=" " alt="" coords="561,457,683,483"/>
+<area shape="rect" href="lock__ext_8h.html#a387d3cd06fb2999414bd1c60a0214649" title=" " alt="" coords="553,507,691,534"/>
+<area shape="rect" href="lock__ext_8h.html#a5d3201469d7c49626a752c11c7760b10" title=" " alt="" coords="560,187,684,214"/>
+<area shape="rect" href="lock__ext_8h.html#a83e03a05b849ad0ca826de75fe29b2cb" title=" " alt="" coords="551,238,693,265"/>
+<area shape="rect" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb" title="Get the primes object." alt="" coords="554,289,690,315"/>
+<area shape="rect" href="queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="565,609,679,635"/>
+<area shape="rect" href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="573,137,671,163"/>
+<area shape="rect" href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="575,558,669,585"/>
+<area shape="rect" href="queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="763,634,925,661"/>
+<area shape="rect" href="lock_8c.html#a6e8492c210a454d788c5e17a81398912" title=" " alt="" coords="331,878,469,905"/>
+<area shape="rect" href="command__line__parsing_8c.html#abec7de20c29cd0444d46f8c5af93e301" title="converts string to int. Validates string has only numbers." alt="" coords="329,929,471,955"/>
+<area shape="rect" href="command__line__parsing_8c.html#a8b53c718f6779378d21946d66ca14ec4" title="converts string to int. Validates string has only numbers." alt="" coords="323,979,477,1006"/>
+<area shape="rect" href="command__line__parsing_8c.html#a3e2c45f563fe312051564da5922fc741" title="print the command line usage for Factori program." alt="" coords="339,1030,461,1057"/>
+<area shape="rect" href="command__line__parsing_8c.html#ad785d9d76730f07ca1ce0f5797ca178d" title="Get the int from string object extract digits character from string." alt="" coords="555,954,689,981"/>
+<area shape="rect" href="queue_8c.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="565,710,679,737"/>
+<area shape="rect" href="queue_8c.html#a367f4872ef35f4e649ab1da4da1626c1" title="Allocate memory for a queue element and set the data with input parameter Return the pointer to the n..." alt="" coords="323,812,477,853"/>
 </map>
 </div>
 
@@ -509,86 +580,133 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>DWORD </dd></dl>
-<p>@TODO: Change the temp assigment of buffer with Vladmirs functions (Work+generate line)</p>
 
-<p class="definition">Definition at line <a class="el" href="factori_8c_source.html#l00231">231</a> of file <a class="el" href="factori_8c_source.html">factori.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">// Debug Prefix /////////////</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a>();</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a> e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c">ERROR_OK</a>;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="structworker__params__s.html">worker_params_t</a> *p_worker_params = (<a class="code" href="structworker__params__s.html">worker_params_t</a>*)lpParam;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    HANDLE tasks_file_handle = NULL;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="comment">// Open task file for reading</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        e_status = <a class="code" href="file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f">FILE_UTILS_create_file_for_shared_read_and_write</a>(&amp;tasks_file_handle, p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a3ff21f335a9d6e04c143c50217585a04">p_tasks_file_name</a>);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">while</span>(FALSE == <a class="code" href="queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892">QUEUE_empty</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a>))</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <a class="code" href="structqueue__elem__s.html">queue_elem_t</a> task_position = <a class="code" href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d">QUEUE_top</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a>);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            SetFilePointer(tasks_file_handle, task_position.<a class="code" href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">data</a>, NULL, FILE_BEGIN);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            DWORD bytes_read_from_file;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            DWORD target_number;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            e_status = <a class="code" href="file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32">FILE_UTILS_read_one_line_from_file</a>(tasks_file_handle, &amp;bytes_read_from_file, &amp;target_number);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <a class="code" href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#a8ff10b75745acf0409de91ac1db60a20">DEBUG_LEVEL_FIVE</a>, <span class="stringliteral">&quot;Thread id: %d, Starting work on target num: %d\n&quot;</span>, GetCurrentThreadId(), target_number);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            e_status = <a class="code" href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018">QUEUE_pop</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a>);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            DWORD primes_array[30] = {0};</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            DWORD number_of_primes = 0;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            e_status = <a class="code" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">PRIME_get_primes</a>(target_number, primes_array, &amp;number_of_primes);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            DWORD bytes_in_line = 0;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="keywordtype">char</span> temp_buffer_until_vladimirs_push[1000] = {0};</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            e_status = <a class="code" href="file__utils__ext_8h.html#aa61cde9f0eda8ca94b81c2b9ea7efcd9">create_output_line</a>(target_number, primes_array, number_of_primes, temp_buffer_until_vladimirs_push, &amp;bytes_in_line);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            e_status = <a class="code" href="file__utils__ext_8h.html#a6ba806c9791793d2e17d9c65745589ad">FILE_UTILS_write_buffer_to_file</a>(tasks_file_handle, temp_buffer_until_vladimirs_push, bytes_in_line);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        }</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    } <span class="keywordflow">while</span> (FALSE);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="comment">/*------------------------------</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">    * Cleanup: Free memory, Close handles</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">    * ----------------------------*/</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">if</span>(tasks_file_handle &amp;&amp; (tasks_file_handle != INVALID_HANDLE_VALUE))</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        CloseHandle(tasks_file_handle);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        tasks_file_handle = NULL;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="comment">// Debug Suffix /////////////</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a>();</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">return</span> (DWORD)e_status;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="factori_8c_source.html#l00289">289</a> of file <a class="el" href="factori_8c_source.html">factori.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;{</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="comment">// Debug Prefix /////////////</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a>();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a> e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c">ERROR_OK</a>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="structworker__params__s.html">worker_params_t</a> *p_worker_params = (<a class="code" href="structworker__params__s.html">worker_params_t</a>*)lpParam;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    HANDLE tasks_file_handle = NULL;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">char</span>* p_output_buffer = NULL;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="structqueue__elem__s.html">queue_elem_t</a> task_position = {0};</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="comment">// Open task file for reading</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        e_status = <a class="code" href="file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f">FILE_UTILS_create_file_for_shared_read_and_write</a>(&amp;tasks_file_handle, p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a6a7695ab492ad6eb66512cc155b184c4">a_tasks_file_name</a>);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">while</span>(TRUE)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            e_status = <a class="code" href="lock__ext_8h.html#a5d3201469d7c49626a752c11c7760b10">LOCK_write_lock</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#ac119332d5ac44045e1c7d27e23263947">p_lock_queue</a>);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            BOOL b_is_empty = <a class="code" href="queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892">QUEUE_empty</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a>);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">if</span>(FALSE == b_is_empty)</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                task_position = <a class="code" href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d">QUEUE_top</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a>);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                e_status = <a class="code" href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018">QUEUE_pop</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">p_queue</a>);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                e_status = <a class="code" href="lock__ext_8h.html#a83e03a05b849ad0ca826de75fe29b2cb">LOCK_write_release</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#ac119332d5ac44045e1c7d27e23263947">p_lock_queue</a>);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            e_status = <a class="code" href="lock__ext_8h.html#a83e03a05b849ad0ca826de75fe29b2cb">LOCK_write_release</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#ac119332d5ac44045e1c7d27e23263947">p_lock_queue</a>);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            SetFilePointer(tasks_file_handle, task_position.<a class="code" href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">data</a>, NULL, FILE_BEGIN);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            DWORD bytes_read_from_file;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            DWORD target_number;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            e_status = <a class="code" href="lock__ext_8h.html#ad998fe7d10043d8d0119913c1104f131">LOCK_read_lock</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a2e86a302da7bea84d2f127e64cb4e8bb">p_lock_tasks_file</a>);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            e_status = <a class="code" href="file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32">FILE_UTILS_read_one_line_from_file</a>(tasks_file_handle, &amp;bytes_read_from_file, &amp;target_number);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            e_status = <a class="code" href="lock__ext_8h.html#a387d3cd06fb2999414bd1c60a0214649">LOCK_read_release</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a2e86a302da7bea84d2f127e64cb4e8bb">p_lock_tasks_file</a>);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            <a class="code" href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#a8ff10b75745acf0409de91ac1db60a20">DEBUG_LEVEL_FIVE</a>, <span class="stringliteral">&quot;Thread id: %d, Starting work on target num: %d\n&quot;</span>, GetCurrentThreadId(), target_number);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            DWORD primes_array[<a class="code" href="prime__ext_8h.html#aeda79141e86c1f59251301eb61b0d3ee">MAX_NUMBER_OF_PRIMES</a>] = {0};</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            DWORD number_of_primes = 0;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            e_status = <a class="code" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">PRIME_get_primes</a>(target_number, primes_array, &amp;number_of_primes);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            DWORD bytes_in_line = 0;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            p_output_buffer = (<span class="keywordtype">char</span>*)malloc((<a class="code" href="file__utils__ext_8h.html#a3c208f29f0217c1c57eb8ba4e1a151e5">CHAR_SIZE_OF_FIRST_LINE</a> + (<a class="code" href="file__utils__ext_8h.html#a9b118d96de984eb21f418e288622ecde">MAX_NUMBER_OF_DIGITS</a>+<a class="code" href="file__utils__ext_8h.html#adf93eb0cba8a591cfec87d854663d791">CHAR_SIZE_OF_LINE_FOR_EACH_PRIME</a>)*number_of_primes)*<span class="keyword">sizeof</span>(char));</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <span class="keywordflow">if</span> (NULL == p_output_buffer)</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Malloc for p_output_buffer failed\n&quot;</span>);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a5ffa8953d8668e40c26f99ba884847b8">ERROR_FAILED_TO_ALLOCATE_MEMORY_E</a>;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            e_status = <a class="code" href="file__utils__ext_8h.html#aa61cde9f0eda8ca94b81c2b9ea7efcd9">create_output_line</a>(target_number, primes_array, number_of_primes, p_output_buffer, &amp;bytes_in_line);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            e_status = <a class="code" href="lock__ext_8h.html#a5d3201469d7c49626a752c11c7760b10">LOCK_write_lock</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a2e86a302da7bea84d2f127e64cb4e8bb">p_lock_tasks_file</a>);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            e_status = <a class="code" href="file__utils__ext_8h.html#a6ba806c9791793d2e17d9c65745589ad">FILE_UTILS_write_buffer_to_file</a>(tasks_file_handle, p_output_buffer, bytes_in_line);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            e_status = <a class="code" href="lock__ext_8h.html#a83e03a05b849ad0ca826de75fe29b2cb">LOCK_write_release</a>(p_worker_params-&gt;<a class="code" href="structworker__params__s.html#a2e86a302da7bea84d2f127e64cb4e8bb">p_lock_tasks_file</a>);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            <a class="code" href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a>(e_status);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    } <span class="keywordflow">while</span> (FALSE);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="comment">/*------------------------------</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment">    * Cleanup: Free memory, Close handles</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment">    * ----------------------------*/</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">if</span>(tasks_file_handle &amp;&amp; (tasks_file_handle != INVALID_HANDLE_VALUE))</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        CloseHandle(tasks_file_handle);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        tasks_file_handle = NULL;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordflow">if</span> (p_output_buffer)</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    {</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        free(p_output_buffer);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    }</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="comment">// Debug Suffix /////////////</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <a class="code" href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a>();</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordflow">return</span> (DWORD)e_status;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="trace_8h_source.html#l00052">CHECK_AND_BREAK</a>, <a class="el" href="file__utils_8c_source.html#l00230">create_output_line()</a>, <a class="el" href="queue__ext_8h_source.html#l00040">queue_elem_s::data</a>, <a class="el" href="trace_8h_source.html#l00089">DEBUG_LEVEL_FIVE</a>, <a class="el" href="trace_8h_source.html#l00156">DEBUG_PRINT</a>, <a class="el" href="trace_8h_source.html#l00159">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00158">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00037">ERROR_OK</a>, <a class="el" href="file__utils_8c_source.html#l00135">FILE_UTILS_create_file_for_shared_read_and_write()</a>, <a class="el" href="file__utils_8c_source.html#l00048">FILE_UTILS_read_one_line_from_file()</a>, <a class="el" href="file__utils_8c_source.html#l00184">FILE_UTILS_write_buffer_to_file()</a>, <a class="el" href="factori_8h_source.html#l00037">worker_params_s::p_queue</a>, <a class="el" href="factori_8h_source.html#l00036">worker_params_s::p_tasks_file_name</a>, <a class="el" href="prime_8c_source.html#l00034">PRIME_get_primes()</a>, <a class="el" href="queue_8c_source.html#l00206">QUEUE_empty()</a>, <a class="el" href="queue_8c_source.html#l00103">QUEUE_pop()</a>, and <a class="el" href="queue_8c_source.html#l00066">QUEUE_top()</a>.</p>
+<p class="reference">References <a class="el" href="factori_8h_source.html#l00036">worker_params_s::a_tasks_file_name</a>, <a class="el" href="file__utils__ext_8h_source.html#l00029">CHAR_SIZE_OF_FIRST_LINE</a>, <a class="el" href="file__utils__ext_8h_source.html#l00031">CHAR_SIZE_OF_LINE_FOR_EACH_PRIME</a>, <a class="el" href="trace_8h_source.html#l00052">CHECK_AND_BREAK</a>, <a class="el" href="file__utils_8c_source.html#l00230">create_output_line()</a>, <a class="el" href="queue__ext_8h_source.html#l00045">queue_elem_s::data</a>, <a class="el" href="trace_8h_source.html#l00089">DEBUG_LEVEL_FIVE</a>, <a class="el" href="trace_8h_source.html#l00132">DEBUG_PRINT</a>, <a class="el" href="trace_8h_source.html#l00160">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00154">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00041">ERROR_FAILED_TO_ALLOCATE_MEMORY_E</a>, <a class="el" href="common__types_8h_source.html#l00038">ERROR_OK</a>, <a class="el" href="file__utils_8c_source.html#l00135">FILE_UTILS_create_file_for_shared_read_and_write()</a>, <a class="el" href="file__utils_8c_source.html#l00048">FILE_UTILS_read_one_line_from_file()</a>, <a class="el" href="file__utils_8c_source.html#l00184">FILE_UTILS_write_buffer_to_file()</a>, <a class="el" href="lock_8c_source.html#l00109">LOCK_read_lock()</a>, <a class="el" href="lock_8c_source.html#l00165">LOCK_read_release()</a>, <a class="el" href="lock_8c_source.html#l00211">LOCK_write_lock()</a>, <a class="el" href="lock_8c_source.html#l00238">LOCK_write_release()</a>, <a class="el" href="file__utils__ext_8h_source.html#l00027">MAX_NUMBER_OF_DIGITS</a>, <a class="el" href="prime__ext_8h_source.html#l00031">MAX_NUMBER_OF_PRIMES</a>, <a class="el" href="factori_8h_source.html#l00038">worker_params_s::p_lock_queue</a>, <a class="el" href="factori_8h_source.html#l00039">worker_params_s::p_lock_tasks_file</a>, <a class="el" href="factori_8h_source.html#l00037">worker_params_s::p_queue</a>, <a class="el" href="prime_8c_source.html#l00033">PRIME_get_primes()</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, <a class="el" href="queue_8c_source.html#l00206">QUEUE_empty()</a>, <a class="el" href="queue_8c_source.html#l00103">QUEUE_pop()</a>, and <a class="el" href="queue_8c_source.html#l00066">QUEUE_top()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00185">create_worker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00237">create_worker()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="factori_8c_acc1487cb2f24894cf9c48a718c302503_cgraph.png" border="0" usemap="#afactori_8c_acc1487cb2f24894cf9c48a718c302503_cgraph" alt=""/></div>
 <map name="factori_8c_acc1487cb2f24894cf9c48a718c302503_cgraph" id="afactori_8c_acc1487cb2f24894cf9c48a718c302503_cgraph">
-<area shape="rect" title=" " alt="" coords="5,224,109,251"/>
+<area shape="rect" title=" " alt="" coords="5,329,109,356"/>
 <area shape="rect" href="file__utils__ext_8h.html#aa61cde9f0eda8ca94b81c2b9ea7efcd9" title="The function prints a line into a buffer according to requirments." alt="" coords="186,5,314,32"/>
 <area shape="rect" href="file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f" title="Creates a file handle for shared Read and WRITE." alt="" coords="157,57,343,98"/>
 <area shape="rect" href="file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32" title="Read a single line, that is, all charecters until \r &#160;(including). Outputs the number of charcters th..." alt="" coords="173,122,327,163"/>
 <area shape="rect" href="file__utils__ext_8h.html#a6ba806c9791793d2e17d9c65745589ad" title=" " alt="" coords="165,187,335,229"/>
-<area shape="rect" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb" title="Get the primes object." alt="" coords="182,253,318,280"/>
-<area shape="rect" href="queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="193,304,307,331"/>
-<area shape="rect" href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="201,355,299,381"/>
-<area shape="rect" href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="203,405,297,432"/>
-<area shape="rect" href="queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="391,355,553,381"/>
+<area shape="rect" href="lock__ext_8h.html#ad998fe7d10043d8d0119913c1104f131" title=" " alt="" coords="189,253,311,280"/>
+<area shape="rect" href="lock__ext_8h.html#a387d3cd06fb2999414bd1c60a0214649" title=" " alt="" coords="181,304,319,331"/>
+<area shape="rect" href="lock__ext_8h.html#a5d3201469d7c49626a752c11c7760b10" title=" " alt="" coords="188,355,312,381"/>
+<area shape="rect" href="lock__ext_8h.html#a83e03a05b849ad0ca826de75fe29b2cb" title=" " alt="" coords="179,405,321,432"/>
+<area shape="rect" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb" title="Get the primes object." alt="" coords="182,456,318,483"/>
+<area shape="rect" href="queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892" title="Is the queue empty? returns true when empty." alt="" coords="193,507,307,533"/>
+<area shape="rect" href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018" title="Removed the top queue element from the queue. If called on empty queue does nothing,..." alt="" coords="201,557,299,584"/>
+<area shape="rect" href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d" title="Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,..." alt="" coords="203,608,297,635"/>
+<area shape="rect" href="queue_8c.html#a6d7944c7e57a033b8127b413b9539d47" title="A queue is valid in two cases: 1) Not&#45;empty: if queue is not empty, count is greater than zero,..." alt="" coords="391,557,553,584"/>
 </map>
 </div>
 <div class="dynheader">
@@ -606,51 +724,68 @@ Here is the caller graph for this function:</div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aqueue__ext_8h_html_afa81aaef004c00ea3f90c1b7cd2317e5"><div class="ttname"><a href="queue__ext_8h.html#afa81aaef004c00ea3f90c1b7cd2317e5">DEBUG_PRINT_QUEUE_STATUS</a></div><div class="ttdeci">#define DEBUG_PRINT_QUEUE_STATUS(...)</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00031">queue_ext.h:31</a></div></div>
-<div class="ttc" id="atrace_8h_html_a04f52cd3d2fada8961ec1d353ac5509d"><div class="ttname"><a href="trace_8h.html#a04f52cd3d2fada8961ec1d353ac5509d">DEBUG_PRINT_ARG</a></div><div class="ttdeci">#define DEBUG_PRINT_ARG(...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00157">trace.h:157</a></div></div>
+<div class="ttc" id="aqueue__ext_8h_html_afa81aaef004c00ea3f90c1b7cd2317e5"><div class="ttname"><a href="queue__ext_8h.html#afa81aaef004c00ea3f90c1b7cd2317e5">DEBUG_PRINT_QUEUE_STATUS</a></div><div class="ttdeci">#define DEBUG_PRINT_QUEUE_STATUS(...)</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00033">queue_ext.h:33</a></div></div>
+<div class="ttc" id="aprime__ext_8h_html_aeda79141e86c1f59251301eb61b0d3ee"><div class="ttname"><a href="prime__ext_8h.html#aeda79141e86c1f59251301eb61b0d3ee">MAX_NUMBER_OF_PRIMES</a></div><div class="ttdeci">#define MAX_NUMBER_OF_PRIMES</div><div class="ttdoc">Since the biggest number allowed is smaller that 2^30 (instruction mentions up to nine digts number)....</div><div class="ttdef"><b>Definition:</b> <a href="prime__ext_8h_source.html#l00031">prime_ext.h:31</a></div></div>
+<div class="ttc" id="atrace_8h_html_a04f52cd3d2fada8961ec1d353ac5509d"><div class="ttname"><a href="trace_8h.html#a04f52cd3d2fada8961ec1d353ac5509d">DEBUG_PRINT_ARG</a></div><div class="ttdeci">#define DEBUG_PRINT_ARG(...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00148">trace.h:148</a></div></div>
 <div class="ttc" id="aqueue__ext_8h_html_a8b324b766f9ec79f8a6b8d7f54cd9d30"><div class="ttname"><a href="queue__ext_8h.html#a8b324b766f9ec79f8a6b8d7f54cd9d30">QUEUE_push</a></div><div class="ttdeci">error_e QUEUE_push(queue_t *p_queue, queue_elem_t new_element)</div><div class="ttdoc">Add a queue element to queue as the p_last_elem element, will also be the p_first_elem if queue was e...</div><div class="ttdef"><b>Definition:</b> <a href="queue_8c_source.html#l00151">queue.c:151</a></div></div>
 <div class="ttc" id="afile__utils__ext_8h_html_a6ba806c9791793d2e17d9c65745589ad"><div class="ttname"><a href="file__utils__ext_8h.html#a6ba806c9791793d2e17d9c65745589ad">FILE_UTILS_write_buffer_to_file</a></div><div class="ttdeci">error_e FILE_UTILS_write_buffer_to_file(HANDLE p_file_handle, const char buffer_to_write[], const DWORD num_of_bytes)</div><div class="ttdef"><b>Definition:</b> <a href="file__utils_8c_source.html#l00184">file_utils.c:184</a></div></div>
 <div class="ttc" id="astructworker__params__s_html"><div class="ttname"><a href="structworker__params__s.html">worker_params_s</a></div><div class="ttdef"><b>Definition:</b> <a href="factori_8h_source.html#l00034">factori.h:35</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232ab090e5181dad1d2fc22dbdc768af5c54"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232ab090e5181dad1d2fc22dbdc768af5c54">ERROR_FAILED_TO_GET_THREAD_EXIT_CODE_E</a></div><div class="ttdeci">@ ERROR_FAILED_TO_GET_THREAD_EXIT_CODE_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00068">common_types.h:68</a></div></div>
-<div class="ttc" id="atrace_8h_html_ad4ed3d5d742c56a417076ab5e1a5dd29"><div class="ttname"><a href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_START()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00158">trace.h:158</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232ab090e5181dad1d2fc22dbdc768af5c54"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232ab090e5181dad1d2fc22dbdc768af5c54">ERROR_FAILED_TO_GET_THREAD_EXIT_CODE_E</a></div><div class="ttdeci">@ ERROR_FAILED_TO_GET_THREAD_EXIT_CODE_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00070">common_types.h:70</a></div></div>
+<div class="ttc" id="atrace_8h_html_ad4ed3d5d742c56a417076ab5e1a5dd29"><div class="ttname"><a href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_START()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00154">trace.h:154</a></div></div>
 <div class="ttc" id="aqueue__ext_8h_html_a8777304a9bca1e8917a46edd1e4209aa"><div class="ttname"><a href="queue__ext_8h.html#a8777304a9bca1e8917a46edd1e4209aa">QUEUE_initialize_queue</a></div><div class="ttdeci">queue_t * QUEUE_initialize_queue(void)</div><div class="ttdoc">Initiliaze a new queue struct. The new queue will be initialized as empty, that is,...</div><div class="ttdef"><b>Definition:</b> <a href="queue_8c_source.html#l00031">queue.c:31</a></div></div>
-<div class="ttc" id="astructqueue__elem__s_html"><div class="ttname"><a href="structqueue__elem__s.html">queue_elem_s</a></div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00038">queue_ext.h:39</a></div></div>
-<div class="ttc" id="afactori_8c_html_ad0a6e0d0a136e229ecf00fd6593c402e"><div class="ttname"><a href="factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e">create_worker</a></div><div class="ttdeci">static error_e create_worker(HANDLE *p_worker_handle, worker_params_t *p_worker_param)</div><div class="ttdoc">Create a worker object: Packs parameters into a struct, and calls CreateThread.</div><div class="ttdef"><b>Definition:</b> <a href="factori_8c_source.html#l00185">factori.c:185</a></div></div>
-<div class="ttc" id="aprime__ext_8h_html_ab1cd6cee23a302a6ac6af9cd7dabb8cb"><div class="ttname"><a href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">PRIME_get_primes</a></div><div class="ttdeci">error_e PRIME_get_primes(const DWORD target, DWORD primes[], DWORD *num_of_primes_point)</div><div class="ttdoc">Get the primes object.</div><div class="ttdef"><b>Definition:</b> <a href="prime_8c_source.html#l00034">prime.c:34</a></div></div>
+<div class="ttc" id="astructqueue__elem__s_html"><div class="ttname"><a href="structqueue__elem__s.html">queue_elem_s</a></div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00043">queue_ext.h:44</a></div></div>
+<div class="ttc" id="afactori_8c_html_ad0a6e0d0a136e229ecf00fd6593c402e"><div class="ttname"><a href="factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e">create_worker</a></div><div class="ttdeci">static error_e create_worker(HANDLE *p_worker_handle, worker_params_t *p_worker_param)</div><div class="ttdoc">Create a worker object: Packs parameters into a struct, and calls CreateThread.</div><div class="ttdef"><b>Definition:</b> <a href="factori_8c_source.html#l00237">factori.c:237</a></div></div>
+<div class="ttc" id="astructworker__params__s_html_a2e86a302da7bea84d2f127e64cb4e8bb"><div class="ttname"><a href="structworker__params__s.html#a2e86a302da7bea84d2f127e64cb4e8bb">worker_params_s::p_lock_tasks_file</a></div><div class="ttdeci">lock_t * p_lock_tasks_file</div><div class="ttdef"><b>Definition:</b> <a href="factori_8h_source.html#l00039">factori.h:39</a></div></div>
+<div class="ttc" id="afile__utils__ext_8h_html_a3c208f29f0217c1c57eb8ba4e1a151e5"><div class="ttname"><a href="file__utils__ext_8h.html#a3c208f29f0217c1c57eb8ba4e1a151e5">CHAR_SIZE_OF_FIRST_LINE</a></div><div class="ttdeci">#define CHAR_SIZE_OF_FIRST_LINE</div><div class="ttdef"><b>Definition:</b> <a href="file__utils__ext_8h_source.html#l00029">file_utils_ext.h:29</a></div></div>
+<div class="ttc" id="alock__ext_8h_html_a5d3201469d7c49626a752c11c7760b10"><div class="ttname"><a href="lock__ext_8h.html#a5d3201469d7c49626a752c11c7760b10">LOCK_write_lock</a></div><div class="ttdeci">error_e LOCK_write_lock(lock_t *const p_lock)</div><div class="ttdef"><b>Definition:</b> <a href="lock_8c_source.html#l00211">lock.c:211</a></div></div>
+<div class="ttc" id="astructlock__s_html"><div class="ttname"><a href="structlock__s.html">lock_s</a></div><div class="ttdef"><b>Definition:</b> <a href="lock__ext_8h_source.html#l00031">lock_ext.h:32</a></div></div>
+<div class="ttc" id="aprime__ext_8h_html_ab1cd6cee23a302a6ac6af9cd7dabb8cb"><div class="ttname"><a href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">PRIME_get_primes</a></div><div class="ttdeci">error_e PRIME_get_primes(const DWORD target, DWORD primes[], DWORD *num_of_primes_point)</div><div class="ttdoc">Get the primes object.</div><div class="ttdef"><b>Definition:</b> <a href="prime_8c_source.html#l00033">prime.c:33</a></div></div>
+<div class="ttc" id="afile__utils__ext_8h_html_adf93eb0cba8a591cfec87d854663d791"><div class="ttname"><a href="file__utils__ext_8h.html#adf93eb0cba8a591cfec87d854663d791">CHAR_SIZE_OF_LINE_FOR_EACH_PRIME</a></div><div class="ttdeci">#define CHAR_SIZE_OF_LINE_FOR_EACH_PRIME</div><div class="ttdef"><b>Definition:</b> <a href="file__utils__ext_8h_source.html#l00031">file_utils_ext.h:31</a></div></div>
+<div class="ttc" id="astructworker__params__s_html_a6a7695ab492ad6eb66512cc155b184c4"><div class="ttname"><a href="structworker__params__s.html#a6a7695ab492ad6eb66512cc155b184c4">worker_params_s::a_tasks_file_name</a></div><div class="ttdeci">char a_tasks_file_name[MAX_PATH]</div><div class="ttdef"><b>Definition:</b> <a href="factori_8h_source.html#l00036">factori.h:36</a></div></div>
 <div class="ttc" id="acommand__line__parsing__ext_8h_html_a48746ebf755019b062fe43d17259c7ef"><div class="ttname"><a href="command__line__parsing__ext_8h.html#a48746ebf755019b062fe43d17259c7ef">parse_command_line_input</a></div><div class="ttdeci">error_e parse_command_line_input(int argc_, char *argv_[], factori_args_t *p_output_args)</div><div class="ttdoc">parsing the command line, validates input integrity and fills the arg structure. CAUTION: This functi...</div><div class="ttdef"><b>Definition:</b> <a href="command__line__parsing_8c_source.html#l00041">command_line_parsing.c:41</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a2c94b966c744d2ac7c5954e07ee61c47"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a2c94b966c744d2ac7c5954e07ee61c47">ERROR_FAILED_TO_CREATE_THREAD_E</a></div><div class="ttdeci">@ ERROR_FAILED_TO_CREATE_THREAD_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00067">common_types.h:67</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a5ffa8953d8668e40c26f99ba884847b8"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a5ffa8953d8668e40c26f99ba884847b8">ERROR_FAILED_TO_ALLOCATE_MEMORY_E</a></div><div class="ttdeci">@ ERROR_FAILED_TO_ALLOCATE_MEMORY_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00040">common_types.h:40</a></div></div>
-<div class="ttc" id="atrace_8h_html_a88edd2aa4feabff4af21a997d5d8aa23"><div class="ttname"><a href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a></div><div class="ttdeci">#define DEBUG_PRINT(...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00156">trace.h:156</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a2c94b966c744d2ac7c5954e07ee61c47"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a2c94b966c744d2ac7c5954e07ee61c47">ERROR_FAILED_TO_CREATE_THREAD_E</a></div><div class="ttdeci">@ ERROR_FAILED_TO_CREATE_THREAD_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00069">common_types.h:69</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a5ffa8953d8668e40c26f99ba884847b8"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a5ffa8953d8668e40c26f99ba884847b8">ERROR_FAILED_TO_ALLOCATE_MEMORY_E</a></div><div class="ttdeci">@ ERROR_FAILED_TO_ALLOCATE_MEMORY_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00041">common_types.h:41</a></div></div>
+<div class="ttc" id="atrace_8h_html_a596f88f10694cc84b74df7727e012d0e"><div class="ttname"><a href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a></div><div class="ttdeci">#define DEBUG_PRINT(__DBG_LEVEL__,...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00132">trace.h:132</a></div></div>
 <div class="ttc" id="astructworker__params__s_html_a33c0a8e7a6412053b789120446f93419"><div class="ttname"><a href="structworker__params__s.html#a33c0a8e7a6412053b789120446f93419">worker_params_s::p_queue</a></div><div class="ttdeci">queue_t * p_queue</div><div class="ttdef"><b>Definition:</b> <a href="factori_8h_source.html#l00037">factori.h:37</a></div></div>
+<div class="ttc" id="alock__ext_8h_html_a83e03a05b849ad0ca826de75fe29b2cb"><div class="ttname"><a href="lock__ext_8h.html#a83e03a05b849ad0ca826de75fe29b2cb">LOCK_write_release</a></div><div class="ttdeci">error_e LOCK_write_release(lock_t *const p_lock)</div><div class="ttdef"><b>Definition:</b> <a href="lock_8c_source.html#l00238">lock.c:238</a></div></div>
 <div class="ttc" id="afile__utils__ext_8h_html_ac483ad62d3ca895678cffe3a53744f32"><div class="ttname"><a href="file__utils__ext_8h.html#ac483ad62d3ca895678cffe3a53744f32">FILE_UTILS_read_one_line_from_file</a></div><div class="ttdeci">error_e FILE_UTILS_read_one_line_from_file(HANDLE file_handle, DWORD *p_bytes_read_in_line, DWORD *p_number)</div><div class="ttdoc">Read a single line, that is, all charecters until \r  (including). Outputs the number of charcters th...</div><div class="ttdef"><b>Definition:</b> <a href="file__utils_8c_source.html#l00048">file_utils.c:48</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a0b228f1b329d42635ff838109be43b6a"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a0b228f1b329d42635ff838109be43b6a">ERROR_INVALID_PARAM_E</a></div><div class="ttdeci">@ ERROR_INVALID_PARAM_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00039">common_types.h:39</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a0b228f1b329d42635ff838109be43b6a"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a0b228f1b329d42635ff838109be43b6a">ERROR_INVALID_PARAM_E</a></div><div class="ttdeci">@ ERROR_INVALID_PARAM_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00040">common_types.h:40</a></div></div>
 <div class="ttc" id="atrace_8h_html_a7f28dc96228653e7742a5687d23e9239"><div class="ttname"><a href="trace_8h.html#a7f28dc96228653e7742a5687d23e9239">CHECK_AND_BREAK</a></div><div class="ttdeci">#define CHECK_AND_BREAK(_status_)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00052">trace.h:52</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a></div><div class="ttdeci">error_e</div><div class="ttdoc">Error enumerators, when shared, allows program call to handle issues.</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00034">common_types.h:35</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a476a73158bf7252482fc4ce97e1fa3f0"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a476a73158bf7252482fc4ce97e1fa3f0">ERROR_STRCPY_FAILED_E</a></div><div class="ttdeci">@ ERROR_STRCPY_FAILED_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00048">common_types.h:48</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a></div><div class="ttdeci">error_e</div><div class="ttdoc">Error enumerators, when shared, allows program call to handle issues.</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00035">common_types.h:36</a></div></div>
+<div class="ttc" id="astructfactori__args__s_html_a0ae7de72f63571717d15a5668b83c8df"><div class="ttname"><a href="structfactori__args__s.html#a0ae7de72f63571717d15a5668b83c8df">factori_args_s::a_task_file_name</a></div><div class="ttdeci">char a_task_file_name[MAX_PATH]</div><div class="ttdef"><b>Definition:</b> <a href="command__line__parsing__ext_8h_source.html#l00029">command_line_parsing_ext.h:29</a></div></div>
 <div class="ttc" id="aqueue__ext_8h_html_af1c113374e964f484498f3fa67352e7d"><div class="ttname"><a href="queue__ext_8h.html#af1c113374e964f484498f3fa67352e7d">QUEUE_top</a></div><div class="ttdeci">queue_elem_t QUEUE_top(queue_t *p_queue)</div><div class="ttdoc">Given a queue, return the top element of the queue. On fail: reutrn a &quot;NULL Queue element&quot;,...</div><div class="ttdef"><b>Definition:</b> <a href="queue_8c_source.html#l00066">queue.c:66</a></div></div>
+<div class="ttc" id="alock__ext_8h_html_a574e3fa24bc964d06eb31813fe80eae0"><div class="ttname"><a href="lock__ext_8h.html#a574e3fa24bc964d06eb31813fe80eae0">LOCK_destroy_lock</a></div><div class="ttdeci">error_e LOCK_destroy_lock(lock_t **p_lock)</div><div class="ttdef"><b>Definition:</b> <a href="lock_8c_source.html#l00275">lock.c:275</a></div></div>
 <div class="ttc" id="aqueue__ext_8h_html_a404707c34930328e4b2bdcd53e600c79"><div class="ttname"><a href="queue__ext_8h.html#a404707c34930328e4b2bdcd53e600c79">QUEUE_destroy_queue</a></div><div class="ttdeci">error_e QUEUE_destroy_queue(queue_t **p_queue)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8c_source.html#l00234">queue.c:234</a></div></div>
-<div class="ttc" id="afactori_8c_html_acc1487cb2f24894cf9c48a718c302503"><div class="ttname"><a href="factori_8c.html#acc1487cb2f24894cf9c48a718c302503">worker_thread</a></div><div class="ttdeci">static DWORD WINAPI worker_thread(LPVOID lpParam)</div><div class="ttdef"><b>Definition:</b> <a href="factori_8c_source.html#l00231">factori.c:231</a></div></div>
+<div class="ttc" id="afactori_8c_html_acc1487cb2f24894cf9c48a718c302503"><div class="ttname"><a href="factori_8c.html#acc1487cb2f24894cf9c48a718c302503">worker_thread</a></div><div class="ttdeci">static DWORD WINAPI worker_thread(LPVOID lpParam)</div><div class="ttdef"><b>Definition:</b> <a href="factori_8c_source.html#l00289">factori.c:289</a></div></div>
+<div class="ttc" id="afile__utils__ext_8h_html_a9b118d96de984eb21f418e288622ecde"><div class="ttname"><a href="file__utils__ext_8h.html#a9b118d96de984eb21f418e288622ecde">MAX_NUMBER_OF_DIGITS</a></div><div class="ttdeci">#define MAX_NUMBER_OF_DIGITS</div><div class="ttdef"><b>Definition:</b> <a href="file__utils__ext_8h_source.html#l00027">file_utils_ext.h:27</a></div></div>
 <div class="ttc" id="atrace_8h_html_a8ff10b75745acf0409de91ac1db60a20"><div class="ttname"><a href="trace_8h.html#a8ff10b75745acf0409de91ac1db60a20">DEBUG_LEVEL_FIVE</a></div><div class="ttdeci">#define DEBUG_LEVEL_FIVE</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00089">trace.h:89</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c">ERROR_OK</a></div><div class="ttdeci">@ ERROR_OK</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00037">common_types.h:37</a></div></div>
-<div class="ttc" id="astructqueue__elem__s_html_a4132b46b4901a516175050042022a791"><div class="ttname"><a href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">queue_elem_s::data</a></div><div class="ttdeci">DWORD data</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00040">queue_ext.h:40</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c">ERROR_OK</a></div><div class="ttdeci">@ ERROR_OK</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00038">common_types.h:38</a></div></div>
+<div class="ttc" id="astructqueue__elem__s_html_a4132b46b4901a516175050042022a791"><div class="ttname"><a href="structqueue__elem__s.html#a4132b46b4901a516175050042022a791">queue_elem_s::data</a></div><div class="ttdeci">DWORD data</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00045">queue_ext.h:45</a></div></div>
+<div class="ttc" id="alock__ext_8h_html_ad998fe7d10043d8d0119913c1104f131"><div class="ttname"><a href="lock__ext_8h.html#ad998fe7d10043d8d0119913c1104f131">LOCK_read_lock</a></div><div class="ttdeci">error_e LOCK_read_lock(lock_t *const p_lock)</div><div class="ttdef"><b>Definition:</b> <a href="lock_8c_source.html#l00109">lock.c:109</a></div></div>
 <div class="ttc" id="aqueue__ext_8h_html_a9bc9b6a4ce45ab9e7bd2beb99646a892"><div class="ttname"><a href="queue__ext_8h.html#a9bc9b6a4ce45ab9e7bd2beb99646a892">QUEUE_empty</a></div><div class="ttdeci">BOOL QUEUE_empty(queue_t *p_queue)</div><div class="ttdoc">Is the queue empty? returns true when empty.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8c_source.html#l00206">queue.c:206</a></div></div>
 <div class="ttc" id="afile__utils__ext_8h_html_aa7d90eddf0161c6ee6b16f7cf59d6525"><div class="ttname"><a href="file__utils__ext_8h.html#aa7d90eddf0161c6ee6b16f7cf59d6525">FILE_UTILS_set_write_position</a></div><div class="ttdeci">void FILE_UTILS_set_write_position(const DWORD position)</div><div class="ttdoc">Set global file position for writing.</div><div class="ttdef"><b>Definition:</b> <a href="file__utils_8c_source.html#l00030">file_utils.c:30</a></div></div>
 <div class="ttc" id="afile__utils__ext_8h_html_aa61cde9f0eda8ca94b81c2b9ea7efcd9"><div class="ttname"><a href="file__utils__ext_8h.html#aa61cde9f0eda8ca94b81c2b9ea7efcd9">create_output_line</a></div><div class="ttdeci">error_e create_output_line(DWORD target, DWORD numbers[], DWORD num_of_primes, char *p_output_buffer, DWORD *p_num_of_bytes_written)</div><div class="ttdoc">The function prints a line into a buffer according to requirments.</div><div class="ttdef"><b>Definition:</b> <a href="file__utils_8c_source.html#l00230">file_utils.c:230</a></div></div>
-<div class="ttc" id="aqueue__ext_8h_html_a1674fd68ced4f60de29e1089924f2614"><div class="ttname"><a href="queue__ext_8h.html#a1674fd68ced4f60de29e1089924f2614">NULL_QUEUE_ELEMENT</a></div><div class="ttdeci">#define NULL_QUEUE_ELEMENT</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00026">queue_ext.h:26</a></div></div>
-<div class="ttc" id="astructfactori__args__s_html_add68cf3a4d93205fcfeec93f90f30c63"><div class="ttname"><a href="structfactori__args__s.html#add68cf3a4d93205fcfeec93f90f30c63">factori_args_s::p_task_file_name</a></div><div class="ttdeci">char * p_task_file_name</div><div class="ttdef"><b>Definition:</b> <a href="command__line__parsing__ext_8h_source.html#l00029">command_line_parsing_ext.h:29</a></div></div>
-<div class="ttc" id="astructqueue__s_html"><div class="ttname"><a href="structqueue__s.html">queue_s</a></div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00045">queue_ext.h:46</a></div></div>
+<div class="ttc" id="astructworker__params__s_html_ac119332d5ac44045e1c7d27e23263947"><div class="ttname"><a href="structworker__params__s.html#ac119332d5ac44045e1c7d27e23263947">worker_params_s::p_lock_queue</a></div><div class="ttdeci">lock_t * p_lock_queue</div><div class="ttdef"><b>Definition:</b> <a href="factori_8h_source.html#l00038">factori.h:38</a></div></div>
+<div class="ttc" id="alock__ext_8h_html_a1438450e8ec75fb3feb6ce67a503d779"><div class="ttname"><a href="lock__ext_8h.html#a1438450e8ec75fb3feb6ce67a503d779">LOCK_initialize_lock</a></div><div class="ttdeci">lock_t * LOCK_initialize_lock(void)</div><div class="ttdef"><b>Definition:</b> <a href="lock_8c_source.html#l00025">lock.c:25</a></div></div>
+<div class="ttc" id="aqueue__ext_8h_html_a1674fd68ced4f60de29e1089924f2614"><div class="ttname"><a href="queue__ext_8h.html#a1674fd68ced4f60de29e1089924f2614">NULL_QUEUE_ELEMENT</a></div><div class="ttdeci">#define NULL_QUEUE_ELEMENT</div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00027">queue_ext.h:27</a></div></div>
+<div class="ttc" id="astructqueue__s_html"><div class="ttname"><a href="structqueue__s.html">queue_s</a></div><div class="ttdef"><b>Definition:</b> <a href="queue__ext_8h_source.html#l00050">queue_ext.h:51</a></div></div>
 <div class="ttc" id="atrace_8h_html_a9e1da3f98202e27d74c6309dec5e8dbf"><div class="ttname"><a href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a></div><div class="ttdeci">#define print_error_msg(...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00042">trace.h:42</a></div></div>
+<div class="ttc" id="atrace_8h_html_adab028ad33c1ace2ad2bc51c6aad0ac4"><div class="ttname"><a href="trace_8h.html#adab028ad33c1ace2ad2bc51c6aad0ac4">DEBUG_LEVEL_ONE</a></div><div class="ttdeci">#define DEBUG_LEVEL_ONE</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00085">trace.h:85</a></div></div>
 <div class="ttc" id="afile__utils__ext_8h_html_ad4637d1602e581b018988f78767d5f5f"><div class="ttname"><a href="file__utils__ext_8h.html#ad4637d1602e581b018988f78767d5f5f">FILE_UTILS_create_file_for_shared_read_and_write</a></div><div class="ttdeci">error_e FILE_UTILS_create_file_for_shared_read_and_write(HANDLE *p_file_handle, char *p_input_file_name)</div><div class="ttdoc">Creates a file handle for shared Read and WRITE.</div><div class="ttdef"><b>Definition:</b> <a href="file__utils_8c_source.html#l00135">file_utils.c:135</a></div></div>
 <div class="ttc" id="aqueue__ext_8h_html_a59dd29666d51f1070ecc907c638f2018"><div class="ttname"><a href="queue__ext_8h.html#a59dd29666d51f1070ecc907c638f2018">QUEUE_pop</a></div><div class="ttdeci">error_e QUEUE_pop(queue_t *p_queue)</div><div class="ttdoc">Removed the top queue element from the queue. If called on empty queue does nothing,...</div><div class="ttdef"><b>Definition:</b> <a href="queue_8c_source.html#l00103">queue.c:103</a></div></div>
-<div class="ttc" id="astructworker__params__s_html_a3ff21f335a9d6e04c143c50217585a04"><div class="ttname"><a href="structworker__params__s.html#a3ff21f335a9d6e04c143c50217585a04">worker_params_s::p_tasks_file_name</a></div><div class="ttdeci">char * p_tasks_file_name</div><div class="ttdef"><b>Definition:</b> <a href="factori_8h_source.html#l00036">factori.h:36</a></div></div>
-<div class="ttc" id="atrace_8h_html_afc1d6b99a4c100f81e56388c74b63cf1"><div class="ttname"><a href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_END()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00159">trace.h:159</a></div></div>
+<div class="ttc" id="alock__ext_8h_html_a387d3cd06fb2999414bd1c60a0214649"><div class="ttname"><a href="lock__ext_8h.html#a387d3cd06fb2999414bd1c60a0214649">LOCK_read_release</a></div><div class="ttdeci">error_e LOCK_read_release(lock_t *const p_lock)</div><div class="ttdef"><b>Definition:</b> <a href="lock_8c_source.html#l00165">lock.c:165</a></div></div>
+<div class="ttc" id="atrace_8h_html_afc1d6b99a4c100f81e56388c74b63cf1"><div class="ttname"><a href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_END()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00160">trace.h:160</a></div></div>
 <div class="ttc" id="astructfactori__args__s_html_a639f825edc175c42483bba7c67ff7ff7"><div class="ttname"><a href="structfactori__args__s.html#a639f825edc175c42483bba7c67ff7ff7">factori_args_s::num_of_threads</a></div><div class="ttdeci">DWORD num_of_threads</div><div class="ttdef"><b>Definition:</b> <a href="command__line__parsing__ext_8h_source.html#l00031">command_line_parsing_ext.h:31</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a8407b9556d8eb7b5c96f75bf6cc1e022"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a8407b9556d8eb7b5c96f75bf6cc1e022">ERROR_FAILES_TO_INITIALIZE_QUEUE_E</a></div><div class="ttdeci">@ ERROR_FAILES_TO_INITIALIZE_QUEUE_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00066">common_types.h:66</a></div></div>
 <div class="ttc" id="astructfactori__args__s_html"><div class="ttname"><a href="structfactori__args__s.html">factori_args_s</a></div><div class="ttdoc">&lt; Needed to use DWORD</div><div class="ttdef"><b>Definition:</b> <a href="command__line__parsing__ext_8h_source.html#l00027">command_line_parsing_ext.h:28</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232abe2a47cd38e8d32957f81c49d39784d0"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232abe2a47cd38e8d32957f81c49d39784d0">ERROR_FAILES_TO_INITIALIZE_LOCK_E</a></div><div class="ttdeci">@ ERROR_FAILES_TO_INITIALIZE_LOCK_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00075">common_types.h:75</a></div></div>
 <div class="ttc" id="astructfactori__args__s_html_a05369ef03cb7e97fd2a5448fa4993efb"><div class="ttname"><a href="structfactori__args__s.html#a05369ef03cb7e97fd2a5448fa4993efb">factori_args_s::p_priority_file_name</a></div><div class="ttdeci">char * p_priority_file_name</div><div class="ttdef"><b>Definition:</b> <a href="command__line__parsing__ext_8h_source.html#l00030">command_line_parsing_ext.h:30</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_41bbe6cf917fb24e0014a8b763a4c43f.html">Ex3</a></li><li class="navelem"><a class="el" href="dir_f3eab118362eb2556e30c81da235aae4.html">Factori</a></li><li class="navelem"><a class="el" href="dir_e4d01f95d99a2189af7a6dae873b892b.html">src</a></li><li class="navelem"><a class="el" href="factori_8c.html">factori.c</a></li>
-    <li class="footer">Generated on Tue Dec 8 2020 20:48:13 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Wed Dec 16 2020 21:46:21 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

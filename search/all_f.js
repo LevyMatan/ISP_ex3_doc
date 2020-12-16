@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['white_5f_5fconsole_5fcolor_5fcode_140',['WHITE__CONSOLE_COLOR_CODE',['../trace_8h.html#a06187d60998f1477feb70eb38da34473',1,'trace.h']]],
-  ['worker_5fparams_5fs_141',['worker_params_s',['../structworker__params__s.html',1,'']]],
-  ['worker_5fparams_5ft_142',['worker_params_t',['../factori_8h.html#a211cf880072f935f64194483e9722825',1,'factori.h']]],
-  ['worker_5fthread_143',['worker_thread',['../factori_8c.html#acc1487cb2f24894cf9c48a718c302503',1,'worker_thread(LPVOID lpParam):&#160;factori.c'],['../factori_8h.html#acc1487cb2f24894cf9c48a718c302503',1,'worker_thread(LPVOID lpParam):&#160;factori.h']]]
+  ['set_5fconsole_5fcolor_149',['SET_CONSOLE_COLOR',['../trace_8h.html#a4184b28a8f43f65b009e1e7f20ae612c',1,'trace.h']]],
+  ['set_5fconsole_5fwhite_150',['SET_CONSOLE_WHITE',['../trace_8h.html#a36553cf06fe235317ed52ed04c9371ab',1,'trace.h']]],
+  ['single_5fthread_5fdebug_5fmode_5foff_151',['SINGLE_THREAD_DEBUG_MODE_OFF',['../trace_8h.html#a155cc615412745e58683ac4778fd1a72',1,'trace.h']]]
 ];
