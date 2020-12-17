@@ -1,4 +1,4 @@
 <map id="queue_elem_s" name="queue_elem_s">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,112,121"/>
+<area shape="rect" id="node1" title="An element of FIFO queue. Hold on a generic data, here limited to a DWORD type. And a pointer to the ..." alt="" coords="5,95,112,121"/>
 <area shape="rect" id="node2" title=" " alt="" coords="21,5,96,32"/>
 </map>

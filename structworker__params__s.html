@@ -98,17 +98,20 @@ $(document).ready(function(){initNavTree('structworker__params__s.html',''); ini
 </div><!--header-->
 <div class="contents">
 
+<p>Packing all the worker parameters. Since the worker has to have an (void*) input parameters. All parameters passed to it must be packaged to a struct. task file name, pointter to priority queue, lock object for queue, lock object for task file.  
+ <a href="structworker__params__s.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="factori_8h_source.html">factori.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for worker_params_s:</div>
 <div class="dyncontent">
 <div class="center"><img src="structworker__params__s__coll__graph.png" border="0" usemap="#aworker__params__s_coll__map" alt="Collaboration graph"/></div>
-<map name="worker__params__s_coll__map" id="aworker__params__s_coll__map">
-<area shape="rect" title=" " alt="" coords="110,364,235,391"/>
+<map name="worker__params__s_coll__map" id="worker__params__s_coll__map">
+<area shape="rect" title="Packing all the worker parameters. Since the worker has to have an (void*) input parameters...." alt="" coords="110,364,235,391"/>
 <area shape="rect" title=" " alt="" coords="5,273,52,300"/>
-<area shape="rect" href="structqueue__s.html" title=" " alt="" coords="101,273,172,300"/>
+<area shape="rect" href="structqueue__s.html" title="A queue object. Has pointer to last and first elements in the queue. Also hold a counter on the numbe..." alt="" coords="101,273,172,300"/>
 <area shape="rect" title=" " alt="" coords="99,5,174,32"/>
-<area shape="rect" href="structqueue__elem__s.html" title=" " alt="" coords="83,168,190,195"/>
+<area shape="rect" href="structqueue__elem__s.html" title="An element of FIFO queue. Hold on a generic data, here limited to a DWORD type. And a pointer to the ..." alt="" coords="83,168,190,195"/>
 <area shape="rect" href="structlock__s.html" title="The struct has three synchornization objects and a counter: two mutexes, and one semaphore...." alt="" coords="283,168,343,195"/>
 <area shape="rect" title=" " alt="" coords="274,5,351,32"/>
 </map>
@@ -126,8 +129,9 @@ Data Fields</h2></td></tr>
 <tr class="separator:a2e86a302da7bea84d2f127e64cb4e8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00034">34</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
+<div class="textblock"><p>Packing all the worker parameters. Since the worker has to have an (void*) input parameters. All parameters passed to it must be packaged to a struct. task file name, pointter to priority queue, lock object for queue, lock object for task file. </p>
+
+<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00043">43</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a6a7695ab492ad6eb66512cc155b184c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a7695ab492ad6eb66512cc155b184c4">&#9670;&nbsp;</a></span>a_tasks_file_name</h2>
@@ -141,7 +145,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00036">36</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00045">45</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00243">create_worker()</a>, and <a class="el" href="factori_8c_source.html#l00296">worker_thread()</a>.</p>
 
@@ -159,7 +163,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00038">38</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00047">47</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00243">create_worker()</a>, <a class="el" href="factori_8c_source.html#l00035">main()</a>, and <a class="el" href="factori_8c_source.html#l00296">worker_thread()</a>.</p>
 
@@ -177,7 +181,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00039">39</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00048">48</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00243">create_worker()</a>, <a class="el" href="factori_8c_source.html#l00035">main()</a>, and <a class="el" href="factori_8c_source.html#l00296">worker_thread()</a>.</p>
 
@@ -195,7 +199,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00037">37</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="factori_8h_source.html#l00046">46</a> of file <a class="el" href="factori_8h_source.html">factori.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00243">create_worker()</a>, <a class="el" href="factori_8c_source.html#l00035">main()</a>, and <a class="el" href="factori_8c_source.html#l00296">worker_thread()</a>.</p>
 
@@ -210,7 +214,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structworker__params__s.html">worker_params_s</a></li>
-    <li class="footer">Generated on Thu Dec 17 2020 10:17:09 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Thu Dec 17 2020 10:38:01 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

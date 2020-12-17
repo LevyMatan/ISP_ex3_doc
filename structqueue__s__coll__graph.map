@@ -1,5 +1,5 @@
 <map id="queue_s" name="queue_s">
-<area shape="rect" id="node1" title=" " alt="" coords="7,199,78,225"/>
+<area shape="rect" id="node1" title="A queue object. Has pointer to last and first elements in the queue. Also hold a counter on the numbe..." alt="" coords="7,199,78,225"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,80,32"/>
-<area shape="rect" id="node3" href="$structqueue__elem__s.html" title=" " alt="" coords="83,95,189,121"/>
+<area shape="rect" id="node3" href="$structqueue__elem__s.html" title="An element of FIFO queue. Hold on a generic data, here limited to a DWORD type. And a pointer to the ..." alt="" coords="83,95,189,121"/>
 </map>

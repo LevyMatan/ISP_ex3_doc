@@ -13,6 +13,6 @@
 <area shape="rect" id="node5" href="$test__main_8c.html" title="Testing utility: to compile a specific function, define FACTORI_TEST_COMPILATION, this way this file ..." alt="" coords="5,229,96,256"/>
 <area shape="rect" id="node9" href="$queue_8c.html" title="Queue module. Allows easy creation and useage of a linked based FIFO queue. That is,..." alt="" coords="241,229,309,256"/>
 <area shape="rect" id="node11" href="$command__line__parsing_8c.html" title="Implementation of all command line parsing functions." alt="" coords="345,155,511,181"/>
-<area shape="rect" id="node13" href="$file__utils_8c.html" title=" " alt="" coords="535,155,617,181"/>
+<area shape="rect" id="node13" href="$file__utils_8c.html" title="Module to enable easy manipulation of files in the factori program. Most probably it is very specific..." alt="" coords="535,155,617,181"/>
 <area shape="rect" id="node15" href="$lock_8c.html" title="Lock module allows easy useage of the readers&#45;writers algorithm for syncronization described at recit..." alt="" coords="641,155,698,181"/>
 </map>

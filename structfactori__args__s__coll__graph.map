@@ -1,5 +1,5 @@
 <map id="factori_args_s" name="factori_args_s">
-<area shape="rect" id="node1" title="&lt; Needed to use DWORD" alt="" coords="50,109,154,136"/>
+<area shape="rect" id="node1" title="All the command line argmuents after parsing them. task file name &#45; hard copy information from argv[0..." alt="" coords="50,109,154,136"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,52,32"/>
 <area shape="rect" id="node3" title=" " alt="" coords="139,5,214,32"/>
 </map>
