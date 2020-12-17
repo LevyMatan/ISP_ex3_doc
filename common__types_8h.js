@@ -1,6 +1,10 @@
 var common__types_8h =
 [
+    [ "FIVE_MINUTES_IN_MILLISECONDS", "common__types_8h.html#a1cbe46e7449a2faf865dbd9f942881ae", null ],
     [ "INVALID_INTEGER_VALUE", "common__types_8h.html#aef4b50ccd470e2aa9f71340e3248b5cd", null ],
+    [ "ONE_MINUTE_IN_MILLISECONDS", "common__types_8h.html#a26fa324e8956d7590e8ecedb7cdb9d33", null ],
+    [ "ONE_SECOND_IN_MILLISECONDS", "common__types_8h.html#a10ea13f9d699df2c89f03a7d403772cc", null ],
+    [ "TEN_SECONDS_IN_MILLISECONDS", "common__types_8h.html#acb8f609d144b2d9742fb5319183f9da1", null ],
     [ "error_e", "common__types_8h.html#ad12fa36082f929f50a001bb27539d909", null ],
     [ "error_e", "common__types_8h.html#a09c25ad25f326a930ae42ace60b70232", [
       [ "ERROR_OK", "common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c", null ],

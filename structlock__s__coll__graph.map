@@ -1,5 +1,5 @@
 <map id="lock_s" name="lock_s">
-<area shape="rect" id="node1" title=" " alt="" coords="97,168,157,195"/>
+<area shape="rect" id="node1" title="The struct has three synchornization objects and a counter: two mutexes, and one semaphore...." alt="" coords="97,168,157,195"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,83,32"/>
 <area shape="rect" id="node3" title=" " alt="" coords="172,5,247,32"/>
 </map>

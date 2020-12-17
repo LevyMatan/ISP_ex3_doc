@@ -1,5 +1,5 @@
 <map id="prime_ext.h" name="prime_ext.h">
-<area shape="rect" id="node1" title="TODO: Vladimir." alt="" coords="95,5,185,32"/>
+<area shape="rect" id="node1" title="Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors." alt="" coords="95,5,185,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="86,155,173,181"/>
 <area shape="rect" id="node3" title=" " alt="" coords="23,80,84,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="109,80,171,107"/>

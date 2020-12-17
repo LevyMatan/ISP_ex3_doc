@@ -1,7 +1,7 @@
 <map id="QUEUE_empty" name="QUEUE_empty">
 <area shape="rect" id="node1" title="Is the queue empty? returns true when empty." alt="" coords="467,31,580,57"/>
-<area shape="rect" id="node2" href="$queue_8c.html#a404707c34930328e4b2bdcd53e600c79" title=" " alt="" coords="104,5,267,32"/>
-<area shape="rect" id="node4" href="$factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title=" " alt="" coords="315,56,419,83"/>
+<area shape="rect" id="node2" href="$queue_8c.html#a404707c34930328e4b2bdcd53e600c79" title="Frees all elements in the queue, then free the queue struct and sets it to NULL." alt="" coords="104,5,267,32"/>
+<area shape="rect" id="node4" href="$factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title="As the name suggests, does most of the work load expected from the program. Details are found in the ..." alt="" coords="315,56,419,83"/>
 <area shape="rect" id="node3" href="$factori_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="&lt; When we want to test a specific function/ scenario compile with that flag, when done,..." alt="" coords="5,31,56,57"/>
 <area shape="rect" id="node5" href="$factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e" title="Create a worker object: Packs parameters into a struct, and calls CreateThread." alt="" coords="133,56,237,83"/>
 </map>

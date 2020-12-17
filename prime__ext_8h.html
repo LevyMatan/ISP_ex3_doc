@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('prime__ext_8h.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 
-<p>TODO: Vladimir.  
+<p>Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Windows.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
@@ -111,7 +111,7 @@ Include dependency graph for prime_ext.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="prime__ext_8h__incl.png" border="0" usemap="#aprime__ext_8h" alt=""/></div>
 <map name="prime__ext_8h" id="aprime__ext_8h">
-<area shape="rect" title="TODO: Vladimir." alt="" coords="95,5,185,32"/>
+<area shape="rect" title="Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors." alt="" coords="95,5,185,32"/>
 <area shape="rect" title=" " alt="" coords="86,155,173,181"/>
 <area shape="rect" title=" " alt="" coords="23,80,84,107"/>
 <area shape="rect" title=" " alt="" coords="109,80,171,107"/>
@@ -126,10 +126,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="prime__ext_8h__dep__incl.png" border="0" usemap="#aprime__ext_8hdep" alt=""/></div>
 <map name="prime__ext_8hdep" id="aprime__ext_8hdep">
-<area shape="rect" title="TODO: Vladimir." alt="" coords="92,5,183,32"/>
-<area shape="rect" href="factori_8h.html" title="Delartion of core function to construct Ceasar program from." alt="" coords="57,80,127,107"/>
-<area shape="rect" href="prime_8c.html" title="TODO: Vladimir." alt="" coords="151,80,217,107"/>
-<area shape="rect" href="factori_8c.html" title="Main program file. The Ceasar program will decrypt an input file." alt="" coords="5,155,75,181"/>
+<area shape="rect" title="Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors." alt="" coords="92,5,183,32"/>
+<area shape="rect" href="factori_8h.html" title="Delartion of core function to construct Factori." alt="" coords="57,80,127,107"/>
+<area shape="rect" href="prime_8c.html" title="Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors." alt="" coords="151,80,217,107"/>
+<area shape="rect" href="factori_8c.html" title="Main program file. Factori will receive 4 command arguments: Task file, priority file,..." alt="" coords="5,155,75,181"/>
 <area shape="rect" href="test__main_8c.html" title="Testing utility: to compile a specific function, define FACTORI_TEST_COMPILATION, this way this file ..." alt="" coords="99,155,189,181"/>
 </map>
 </div>
@@ -145,11 +145,11 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab1cd6cee23a302a6ac6af9cd7dabb8cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">PRIME_get_primes</a> (const DWORD target, DWORD primes[], DWORD *num_of_primes_point)</td></tr>
-<tr class="memdesc:ab1cd6cee23a302a6ac6af9cd7dabb8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the primes object.  <a href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">More...</a><br /></td></tr>
+<tr class="memdesc:ab1cd6cee23a302a6ac6af9cd7dabb8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors.  <a href="prime__ext_8h.html#ab1cd6cee23a302a6ac6af9cd7dabb8cb">More...</a><br /></td></tr>
 <tr class="separator:ab1cd6cee23a302a6ac6af9cd7dabb8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>TODO: Vladimir. </p>
+<div class="textblock"><p>Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors. </p>
 <dl class="section author"><dt>Author</dt><dd>Matan Levy (<a href="#" onclick="location.href='mai'+'lto:'+'lev'+'ym'+'ata'+'nl'+'evy'+'@g'+'mai'+'l.'+'com'; return false;">levym<span style="display: none;">.nosp@m.</span>atan<span style="display: none;">.nosp@m.</span>levy@<span style="display: none;">.nosp@m.</span>gmai<span style="display: none;">.nosp@m.</span>l.com</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2020-11-09</dd></dl>
@@ -208,7 +208,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the primes object. </p>
+<p>Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Number we want to compute the prime factors for. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">primes</td><td>An array that will be filled with the prime factors </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">num_of_primes_point</td><td>The total number of prime factors of the target number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>error_e</dd></dl>
+<p>Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td></td></tr>
@@ -231,65 +241,64 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    DWORD n = target;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (n == 0)</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        primes[number_of_primes] = 0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        number_of_primes++;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a>(<span class="stringliteral">&quot;Target number is 0 and it is not allowed\n&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        e_status = <a class="code" href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a0b228f1b329d42635ff838109be43b6a">ERROR_INVALID_PARAM_E</a>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (n == 1)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        primes[number_of_primes] = 1;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        number_of_primes++;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">while</span> (n % 2 == 0)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aad19bef22904b279f885cf97fcb66075">DEBUG_LEVEL_HIGHEST</a>, <span class="stringliteral">&quot;The number n = %d has 2 as a prime factor.\n&quot;</span>, n);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            primes[number_of_primes] = 2;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            number_of_primes++;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            n = n / 2;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// n must be odd</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 3; i &lt;= sqrt(n); i = i + 2)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="comment">// While i divides n, print i and divide n </span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">while</span> (n % i == 0)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <a class="code" href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aad19bef22904b279f885cf97fcb66075">DEBUG_LEVEL_HIGHEST</a>, <span class="stringliteral">&quot;The number n = %d has %d as a prime factor.\n&quot;</span>, n, i);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                primes[number_of_primes] = i;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                number_of_primes++;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                n = n / i;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// This condition is to handle the case when n is a prime number.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (n &gt; 2)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aad19bef22904b279f885cf97fcb66075">DEBUG_LEVEL_HIGHEST</a>, <span class="stringliteral">&quot;The number n = %d is a prime.\n&quot;</span>, n);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        primes[number_of_primes] = n;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        number_of_primes++;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    *num_of_primes_point = number_of_primes;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        primes[number_of_primes] = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">while</span> (n % 2 == 0)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aad19bef22904b279f885cf97fcb66075">DEBUG_LEVEL_HIGHEST</a>, <span class="stringliteral">&quot;The number n = %d has 2 as a prime factor.\n&quot;</span>, n);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            primes[number_of_primes] = 2;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            number_of_primes++;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            n = n / 2;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// n must be odd</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 3; i &lt;= sqrt(n); i = i + 2)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">// While i divides n, print i and divide n </span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">while</span> (n % i == 0)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <a class="code" href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aad19bef22904b279f885cf97fcb66075">DEBUG_LEVEL_HIGHEST</a>, <span class="stringliteral">&quot;The number n = %d has %d as a prime factor.\n&quot;</span>, n, i);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                primes[number_of_primes] = i;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                number_of_primes++;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                n = n / i;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// This condition is to handle the case when n is a prime number.</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (n &gt; 2)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a>(<a class="code" href="trace_8h.html#aad19bef22904b279f885cf97fcb66075">DEBUG_LEVEL_HIGHEST</a>, <span class="stringliteral">&quot;The number n = %d is a prime.\n&quot;</span>, n);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        primes[number_of_primes] = n;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        number_of_primes++;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    *num_of_primes_point = number_of_primes;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// Debug Suffix /////////////</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a>();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="trace_8h.html#a36553cf06fe235317ed52ed04c9371ab">SET_CONSOLE_WHITE</a>();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> e_status;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// Debug Suffix /////////////</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="trace_8h.html#a36553cf06fe235317ed52ed04c9371ab">SET_CONSOLE_WHITE</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> e_status;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="trace_8h_source.html#l00032">BLUISH__CONSOLE_COLOR_CODE</a>, <a class="el" href="trace_8h_source.html#l00094">DEBUG_LEVEL_HIGHEST</a>, <a class="el" href="trace_8h_source.html#l00132">DEBUG_PRINT</a>, <a class="el" href="trace_8h_source.html#l00160">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00154">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00038">ERROR_OK</a>, <a class="el" href="trace_8h_source.html#l00058">SET_CONSOLE_COLOR</a>, and <a class="el" href="trace_8h_source.html#l00063">SET_CONSOLE_WHITE</a>.</p>
+<p class="reference">References <a class="el" href="trace_8h_source.html#l00032">BLUISH__CONSOLE_COLOR_CODE</a>, <a class="el" href="trace_8h_source.html#l00094">DEBUG_LEVEL_HIGHEST</a>, <a class="el" href="trace_8h_source.html#l00169">DEBUG_PRINT</a>, <a class="el" href="trace_8h_source.html#l00172">DEBUG_PRINT_FUNCTION_END</a>, <a class="el" href="trace_8h_source.html#l00171">DEBUG_PRINT_FUNCTION_START</a>, <a class="el" href="common__types_8h_source.html#l00046">ERROR_INVALID_PARAM_E</a>, <a class="el" href="common__types_8h_source.html#l00044">ERROR_OK</a>, <a class="el" href="trace_8h_source.html#l00042">print_error_msg</a>, <a class="el" href="trace_8h_source.html#l00058">SET_CONSOLE_COLOR</a>, and <a class="el" href="trace_8h_source.html#l00063">SET_CONSOLE_WHITE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00289">worker_thread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="factori_8c_source.html#l00296">worker_thread()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="prime__ext_8h_ab1cd6cee23a302a6ac6af9cd7dabb8cb_icgraph.png" border="0" usemap="#aprime__ext_8h_ab1cd6cee23a302a6ac6af9cd7dabb8cb_icgraph" alt=""/></div>
 <map name="prime__ext_8h_ab1cd6cee23a302a6ac6af9cd7dabb8cb_icgraph" id="aprime__ext_8h_ab1cd6cee23a302a6ac6af9cd7dabb8cb_icgraph">
-<area shape="rect" title="Get the primes object." alt="" coords="408,5,544,32"/>
-<area shape="rect" href="factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title=" " alt="" coords="256,5,360,32"/>
+<area shape="rect" title="Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors." alt="" coords="408,5,544,32"/>
+<area shape="rect" href="factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title="As the name suggests, does most of the work load expected from the program. Details are found in the ..." alt="" coords="256,5,360,32"/>
 <area shape="rect" href="factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e" title="Create a worker object: Packs parameters into a struct, and calls CreateThread." alt="" coords="104,5,208,32"/>
 <area shape="rect" href="factori_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="&lt; When we want to test a specific function/ scenario compile with that flag, when done,..." alt="" coords="5,5,56,32"/>
 </map>
@@ -299,20 +308,22 @@ Here is the caller graph for this function:</div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="atrace_8h_html_ad4ed3d5d742c56a417076ab5e1a5dd29"><div class="ttname"><a href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_START()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00154">trace.h:154</a></div></div>
-<div class="ttc" id="atrace_8h_html_a596f88f10694cc84b74df7727e012d0e"><div class="ttname"><a href="trace_8h.html#a596f88f10694cc84b74df7727e012d0e">DEBUG_PRINT</a></div><div class="ttdeci">#define DEBUG_PRINT(__DBG_LEVEL__,...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00132">trace.h:132</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a></div><div class="ttdeci">error_e</div><div class="ttdoc">Error enumerators, when shared, allows program call to handle issues.</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00035">common_types.h:36</a></div></div>
+<div class="ttc" id="atrace_8h_html_ad4ed3d5d742c56a417076ab5e1a5dd29"><div class="ttname"><a href="trace_8h.html#ad4ed3d5d742c56a417076ab5e1a5dd29">DEBUG_PRINT_FUNCTION_START</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_START()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00171">trace.h:171</a></div></div>
+<div class="ttc" id="atrace_8h_html_a88edd2aa4feabff4af21a997d5d8aa23"><div class="ttname"><a href="trace_8h.html#a88edd2aa4feabff4af21a997d5d8aa23">DEBUG_PRINT</a></div><div class="ttdeci">#define DEBUG_PRINT(...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00169">trace.h:169</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232a0b228f1b329d42635ff838109be43b6a"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232a0b228f1b329d42635ff838109be43b6a">ERROR_INVALID_PARAM_E</a></div><div class="ttdeci">@ ERROR_INVALID_PARAM_E</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00046">common_types.h:46</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232">error_e</a></div><div class="ttdeci">error_e</div><div class="ttdoc">Error enumerators, when shared, allows program call to handle issues.</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00041">common_types.h:42</a></div></div>
 <div class="ttc" id="atrace_8h_html_a4184b28a8f43f65b009e1e7f20ae612c"><div class="ttname"><a href="trace_8h.html#a4184b28a8f43f65b009e1e7f20ae612c">SET_CONSOLE_COLOR</a></div><div class="ttdeci">#define SET_CONSOLE_COLOR(_console_color)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00058">trace.h:58</a></div></div>
-<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c">ERROR_OK</a></div><div class="ttdeci">@ ERROR_OK</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00038">common_types.h:38</a></div></div>
+<div class="ttc" id="acommon__types_8h_html_a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c"><div class="ttname"><a href="common__types_8h.html#a09c25ad25f326a930ae42ace60b70232aadeb5032c03491611646c1c64f7c0e0c">ERROR_OK</a></div><div class="ttdeci">@ ERROR_OK</div><div class="ttdef"><b>Definition:</b> <a href="common__types_8h_source.html#l00044">common_types.h:44</a></div></div>
+<div class="ttc" id="atrace_8h_html_a9e1da3f98202e27d74c6309dec5e8dbf"><div class="ttname"><a href="trace_8h.html#a9e1da3f98202e27d74c6309dec5e8dbf">print_error_msg</a></div><div class="ttdeci">#define print_error_msg(...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00042">trace.h:42</a></div></div>
 <div class="ttc" id="atrace_8h_html_a69b6cefe8cfb854add65e77cdb1eaa58"><div class="ttname"><a href="trace_8h.html#a69b6cefe8cfb854add65e77cdb1eaa58">BLUISH__CONSOLE_COLOR_CODE</a></div><div class="ttdeci">#define BLUISH__CONSOLE_COLOR_CODE</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00032">trace.h:32</a></div></div>
-<div class="ttc" id="atrace_8h_html_afc1d6b99a4c100f81e56388c74b63cf1"><div class="ttname"><a href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_END()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00160">trace.h:160</a></div></div>
+<div class="ttc" id="atrace_8h_html_afc1d6b99a4c100f81e56388c74b63cf1"><div class="ttname"><a href="trace_8h.html#afc1d6b99a4c100f81e56388c74b63cf1">DEBUG_PRINT_FUNCTION_END</a></div><div class="ttdeci">#define DEBUG_PRINT_FUNCTION_END()</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00172">trace.h:172</a></div></div>
 <div class="ttc" id="atrace_8h_html_aad19bef22904b279f885cf97fcb66075"><div class="ttname"><a href="trace_8h.html#aad19bef22904b279f885cf97fcb66075">DEBUG_LEVEL_HIGHEST</a></div><div class="ttdeci">#define DEBUG_LEVEL_HIGHEST</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00094">trace.h:94</a></div></div>
 <div class="ttc" id="atrace_8h_html_a36553cf06fe235317ed52ed04c9371ab"><div class="ttname"><a href="trace_8h.html#a36553cf06fe235317ed52ed04c9371ab">SET_CONSOLE_WHITE</a></div><div class="ttdeci">#define SET_CONSOLE_WHITE(...)</div><div class="ttdef"><b>Definition:</b> <a href="trace_8h_source.html#l00063">trace.h:63</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_41bbe6cf917fb24e0014a8b763a4c43f.html">Ex3</a></li><li class="navelem"><a class="el" href="dir_f3eab118362eb2556e30c81da235aae4.html">Factori</a></li><li class="navelem"><a class="el" href="dir_5a3447bd14d185288e2bbd0637dced25.html">include</a></li><li class="navelem"><a class="el" href="prime__ext_8h.html">prime_ext.h</a></li>
-    <li class="footer">Generated on Wed Dec 16 2020 21:46:21 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Thu Dec 17 2020 10:17:09 for EX3 by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

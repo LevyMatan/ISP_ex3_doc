@@ -4,6 +4,6 @@
 <area shape="rect" id="node3" href="$structqueue__s.html" title=" " alt="" coords="101,273,172,300"/>
 <area shape="rect" id="node4" title=" " alt="" coords="99,5,174,32"/>
 <area shape="rect" id="node5" href="$structqueue__elem__s.html" title=" " alt="" coords="83,168,190,195"/>
-<area shape="rect" id="node6" href="$structlock__s.html" title=" " alt="" coords="283,168,343,195"/>
+<area shape="rect" id="node6" href="$structlock__s.html" title="The struct has three synchornization objects and a counter: two mutexes, and one semaphore...." alt="" coords="283,168,343,195"/>
 <area shape="rect" id="node7" title=" " alt="" coords="274,5,351,32"/>
 </map>

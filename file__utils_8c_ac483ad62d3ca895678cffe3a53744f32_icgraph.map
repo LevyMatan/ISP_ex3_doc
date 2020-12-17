@@ -1,6 +1,6 @@
 <map id="FILE_UTILS_read_one_line_from_file" name="FILE_UTILS_read_one_line_from_file">
 <area shape="rect" id="node1" title="Read a single line, that is, all charecters until \r &#160;(including). Outputs the number of charcters th..." alt="" coords="408,5,563,47"/>
 <area shape="rect" id="node2" href="$factori_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="&lt; When we want to test a specific function/ scenario compile with that flag, when done,..." alt="" coords="5,13,56,39"/>
-<area shape="rect" id="node3" href="$factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title=" " alt="" coords="256,38,360,65"/>
+<area shape="rect" id="node3" href="$factori_8c.html#acc1487cb2f24894cf9c48a718c302503" title="As the name suggests, does most of the work load expected from the program. Details are found in the ..." alt="" coords="256,38,360,65"/>
 <area shape="rect" id="node4" href="$factori_8c.html#ad0a6e0d0a136e229ecf00fd6593c402e" title="Create a worker object: Packs parameters into a struct, and calls CreateThread." alt="" coords="104,38,208,65"/>
 </map>

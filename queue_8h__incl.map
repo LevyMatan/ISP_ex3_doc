@@ -1,8 +1,8 @@
 <map id="queue.h" name="queue.h">
-<area shape="rect" id="node1" title="Delartion of core function to construct Ceasar program from." alt="" coords="83,5,151,32"/>
+<area shape="rect" id="node1" title="Delartion of private functions of queue module." alt="" coords="83,5,151,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,229,92,256"/>
 <area shape="rect" id="node3" title=" " alt="" coords="35,80,97,107"/>
-<area shape="rect" id="node4" href="$queue__ext_8h.html" title="All exposed functions and types to be used by someone who wants to call the Ceasar lib/program." alt="" coords="121,80,214,107"/>
+<area shape="rect" id="node4" href="$queue__ext_8h.html" title="All exposed functions and types to be used by someone who wants to call the Queue module." alt="" coords="121,80,214,107"/>
 <area shape="rect" id="node6" href="$trace_8h.html" title="All common hardcoded data, types, and constants." alt="" coords="233,155,296,181"/>
 <area shape="rect" id="node5" href="$common__types_8h.html" title="All common hardcoded data, types, and constants." alt="" coords="86,155,209,181"/>
 <area shape="rect" id="node7" title=" " alt="" coords="186,229,253,256"/>

@@ -1,5 +1,5 @@
 <map id="LOCK_destroy_lock" name="LOCK_destroy_lock">
-<area shape="rect" id="node1" title=" " alt="" coords="295,31,433,57"/>
-<area shape="rect" id="node2" href="$lock_8c.html#a1438450e8ec75fb3feb6ce67a503d779" title=" " alt="" coords="104,5,247,32"/>
+<area shape="rect" id="node1" title="Close all handles of the sync objects. Free the allocated memory, and set the pointer to the struct t..." alt="" coords="295,31,433,57"/>
+<area shape="rect" id="node2" href="$lock_8c.html#a1438450e8ec75fb3feb6ce67a503d779" title="Initialize a lock struct, All three sync object are created but not assigned to anyone yet...." alt="" coords="104,5,247,32"/>
 <area shape="rect" id="node3" href="$factori_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="&lt; When we want to test a specific function/ scenario compile with that flag, when done,..." alt="" coords="5,31,56,57"/>
 </map>

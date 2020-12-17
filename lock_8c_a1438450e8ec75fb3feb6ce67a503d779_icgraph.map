@@ -1,4 +1,4 @@
 <map id="LOCK_initialize_lock" name="LOCK_initialize_lock">
-<area shape="rect" id="node1" title=" " alt="" coords="104,5,247,32"/>
+<area shape="rect" id="node1" title="Initialize a lock struct, All three sync object are created but not assigned to anyone yet...." alt="" coords="104,5,247,32"/>
 <area shape="rect" id="node2" href="$factori_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="&lt; When we want to test a specific function/ scenario compile with that flag, when done,..." alt="" coords="5,5,56,32"/>
 </map>

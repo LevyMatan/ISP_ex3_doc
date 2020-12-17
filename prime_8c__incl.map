@@ -1,6 +1,6 @@
 <map id="prime.c" name="prime.c">
-<area shape="rect" id="node1" title="TODO: Vladimir." alt="" coords="107,5,173,32"/>
-<area shape="rect" id="node2" href="$prime__ext_8h.html" title="TODO: Vladimir." alt="" coords="95,80,185,107"/>
+<area shape="rect" id="node1" title="Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors." alt="" coords="107,5,173,32"/>
+<area shape="rect" id="node2" href="$prime__ext_8h.html" title="Compute the prime factors of a given POSITIVE number. 0 is not allowed, and 1 has no prime factors." alt="" coords="95,80,185,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="86,229,173,256"/>
 <area shape="rect" id="node4" title=" " alt="" coords="23,155,84,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="109,155,171,181"/>

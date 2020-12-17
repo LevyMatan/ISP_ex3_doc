@@ -1,8 +1,8 @@
 <map id="command_line_parsing_ext.h" name="command_line_parsing_ext.h">
 <area shape="rect" id="node1" title="Decleration and defenitions of all command line parsing related function and macros." alt="" coords="82,5,237,47"/>
 <area shape="rect" id="node2" href="$command__line__parsing_8h.html" title="Decleration and defenitions of all command line parsing related function and macros." alt="" coords="5,95,172,121"/>
-<area shape="rect" id="node4" href="$factori_8h.html" title="Delartion of core function to construct Ceasar program from." alt="" coords="197,95,266,121"/>
+<area shape="rect" id="node4" href="$factori_8h.html" title="Delartion of core function to construct Factori." alt="" coords="197,95,266,121"/>
 <area shape="rect" id="node3" href="$command__line__parsing_8c.html" title="Implementation of all command line parsing functions." alt="" coords="5,169,172,196"/>
-<area shape="rect" id="node5" href="$factori_8c.html" title="Main program file. The Ceasar program will decrypt an input file." alt="" coords="197,169,266,196"/>
+<area shape="rect" id="node5" href="$factori_8c.html" title="Main program file. Factori will receive 4 command arguments: Task file, priority file,..." alt="" coords="197,169,266,196"/>
 <area shape="rect" id="node6" href="$test__main_8c.html" title="Testing utility: to compile a specific function, define FACTORI_TEST_COMPILATION, this way this file ..." alt="" coords="290,169,381,196"/>
 </map>

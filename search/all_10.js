@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['task_5ffile_5fname_5farg_5findex_152',['TASK_FILE_NAME_ARG_INDEX',['../command__line__parsing_8h.html#ae13fa5a7a02451d439a5a1b79847615f',1,'command_line_parsing.h']]],
-  ['tasks_5fnum_5farg_5findex_153',['TASKS_NUM_ARG_INDEX',['../command__line__parsing_8h.html#a90adeca1940a4cc09e6fab65e919033d',1,'command_line_parsing.h']]],
+  ['task_5ffile_5fname_5farg_5findex_151',['TASK_FILE_NAME_ARG_INDEX',['../command__line__parsing_8h.html#ae13fa5a7a02451d439a5a1b79847615f',1,'command_line_parsing.h']]],
+  ['tasks_5fnum_5farg_5findex_152',['TASKS_NUM_ARG_INDEX',['../command__line__parsing_8h.html#a90adeca1940a4cc09e6fab65e919033d',1,'command_line_parsing.h']]],
+  ['ten_5fseconds_5fin_5fmilliseconds_153',['TEN_SECONDS_IN_MILLISECONDS',['../common__types_8h.html#acb8f609d144b2d9742fb5319183f9da1',1,'common_types.h']]],
   ['test_5fmain_2ec_154',['test_main.c',['../test__main_8c.html',1,'']]],
   ['thread_5fnum_5farg_5findex_155',['THREAD_NUM_ARG_INDEX',['../command__line__parsing_8h.html#a01d3a27cca10e3d85bc41ddde8893de8',1,'command_line_parsing.h']]],
   ['trace_2ec_156',['trace.c',['../trace_8c.html',1,'']]],
